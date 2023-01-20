@@ -1,0 +1,18 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro.md
+parts:
+- chapters:
+  - file: UserGuide/user_guide.md
+    sections:
+    - file: UserGuide/getting_started.md
+  - file: Tutorials/tutorials.md
+    sections:
+    - file: Tutorials/run_baseline.md
+    - file: Tutorials/run_multiple_scenarios.md
+  - file: Supplemental/supplemental.md
+    sections:
+    - file: Supplemental/kirsch_nowak_method.md
+    - file: Supplemental/pub.md
