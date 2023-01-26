@@ -65,6 +65,8 @@ jobs:
     - name: Build book
       run: jupyter-book build --all docs/
 
+    # Generate folium map and copy file to _build
+
     # Deploy html to gh-pages
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
