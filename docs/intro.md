@@ -2,7 +2,7 @@
 
 Pywr-DRB is an integrated water resource model of the Delaware River Basin (DRB) designed to assist in water resource decision making within the basin.
 
-A graphical representation of the modeled water network is shown below:
+A graphical representation of the model is shown below:
 
 <iframe src="https://github.com/TrevorJA/Pywr_DRB_documentation/blob/main/docs/drb_model_map.html" height = "500" width = "800" title = "Graphical Representation of Pywr-DRB Model"></iframe>
 
