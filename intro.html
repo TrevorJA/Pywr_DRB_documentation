@@ -368,14 +368,17 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pywr-DRB</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#model-overview">Model Overview</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-goals">Model Goals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-design">Model design</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#represented-components">Represented components</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-overview">Model Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-goals">Model Goals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-design">Model design</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#represented-components">Represented components</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgments">Acknowledgments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
 </ul>
 </li>
 </ul>
@@ -393,13 +396,39 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="pywr-drb">
 <h1>Pywr-DRB<a class="headerlink" href="#pywr-drb" title="Permalink to this heading">#</a></h1>
 <p>Pywr-DRB is an integrated water resource model of the Delaware River Basin (DRB) designed to assist in water resource decision making within the basin.</p>
+<p>A graphical representation of the modeled water network is shown below:</p>
+<iframe src="https://github.com/TrevorJA/Pywr_DRB_documentation/blob/main/docs/drb_model_map.html" height = "500" width = "800" title = "Graphical Representation of Pywr-DRB Model"></iframe>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="model-overview">
-<h1>Model Overview<a class="headerlink" href="#model-overview" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="contents">
+<h1>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Getting_Started/getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Getting_Started/setup_model.html">Setup Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Getting_Started/run_all_simulations.html">Running model simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API_References/api_references.html">References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API_References/function_references.html">Function References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Supplemental/supplemental.html">Supplemental Material</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/data_summary.html">Summary of data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/pub.html">Prediction in ungauged basins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html#kirsch-nowak-synthetic-generator">Kirsch-Nowak Synthetic Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html#nowak-disaggregation-to-daily-flows">Nowak disaggregation to daily flows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="model-overview">
+<h2>Model Overview<a class="headerlink" href="#model-overview" title="Permalink to this heading">#</a></h2>
 <p>Pywr-DRB is an integrated water resource model of the Delaware River Basin (DRB) designed to assist in water resource decision making within the basin.</p>
 <p>The model is build using <a class="reference external" href="https://pywr.github.io/pywr/index.html">Pywr</a>, a opensource Python package for constructing resource allocation models.</p>
 <section id="model-goals">
-<h2>Model Goals<a class="headerlink" href="#model-goals" title="Permalink to this heading">#</a></h2>
+<h3>Model Goals<a class="headerlink" href="#model-goals" title="Permalink to this heading">#</a></h3>
 <p>The Pywr-DRB model was constructed with the following goals:</p>
 <ol class="arabic simple">
 <li><p>Accurately represent water management policy across the DRB</p></li>
@@ -407,12 +436,10 @@ document.write(`
 </ol>
 </section>
 <section id="model-design">
-<h2>Model design<a class="headerlink" href="#model-design" title="Permalink to this heading">#</a></h2>
+<h3>Model design<a class="headerlink" href="#model-design" title="Permalink to this heading">#</a></h3>
 <p>The Pywr-DRB model is designed to recieve streamflow timeseries at 18 upstream catchments and 3 mainstem locations as inputs. The model simulates and outputs water supply deliveries, reservoir releases and storage levels, and streamflow volumes throughout the basin on a daily timestep.</p>
-<p>A graphical representation of the modeled water network is shown below:</p>
-<iframe src="./drb_model_map.html" height = "500" width = "800"></iframe>
 <section id="represented-components">
-<h3>Represented components<a class="headerlink" href="#represented-components" title="Permalink to this heading">#</a></h3>
+<h4>Represented components<a class="headerlink" href="#represented-components" title="Permalink to this heading">#</a></h4>
 <p>The Pywr-DRB model includes representation of the following:</p>
 <ul class="simple">
 <li><p>Historic and future streamflow throughout the basin</p></li>
@@ -423,21 +450,19 @@ document.write(`
 </ul>
 </section>
 </section>
+</section>
 <section id="acknowledgments">
 <h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this heading">#</a></h2>
 <p>This work is done in partnership with the United States Geologic Survey (USGS) with the goal of supporting their <a class="reference external" href="https://www.usgs.gov/mission-areas/water-resources/science/integrated-water-availability-assessments-iwaas">Integrated Water Availability Assessments</a>. The project is an interagency collaboration effort with contributors from Cornell University, NCAR, PNNL, and LBNL.</p>
 </section>
 <section id="resources">
-<h2>Resources:<a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h2>
-<p>USGS Visualization Narratives of the DRB:</p>
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://labs.waterdata.usgs.gov/visualizations/delaware-basin-story/index.html#/"><em>Water Management and Science in the DRB</em></a></p></li>
 <li><p><a class="reference external" href="https://labs.waterdata.usgs.gov/visualizations/temperature-prediction/index.html#/monitoring"><em>How We <strong>Monitor</strong> Stream Temperature in the DRB</em></a></p></li>
 <li><p><a class="reference external" href="https://labs.waterdata.usgs.gov/visualizations/temperature-prediction/index.html#/modeling"><em>How We <strong>Model</strong> Stream Temperature in the DRB</em></a></p></li>
 </ul>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -493,14 +518,17 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pywr-DRB</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#model-overview">Model Overview</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-goals">Model Goals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-design">Model design</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#represented-components">Represented components</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-overview">Model Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-goals">Model Goals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-design">Model design</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#represented-components">Represented components</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgments">Acknowledgments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
 </ul>
 </li>
 </ul>
