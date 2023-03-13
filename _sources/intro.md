@@ -4,20 +4,29 @@ Pywr-DRB is an integrated water resource model of the Delaware River Basin (DRB)
 
 The model is build using [Pywr](https://pywr.github.io/pywr/index.html), a opensource Python package for constructing resource allocation models.
 
-
----
-**NOTE:**
-
-This model, and all of the corresponding documentation are under active development.
-
----
-
-
 A graphical representation of the modeled water network is shown below:
 
 <iframe src="drb_model_map.html" height = "500" width = "800"></iframe>
 
+## Contents
+```{tableofcontents}
+```
 
+
+- Pywr-DRB Model
+  - Model overview
+  - Model design
+- Getting Started
+  - Installing Pywr-DRB
+  - Simulating historic conditions
+- API Reference
+  - Building model nodes
+  - Custom reservoir policies
+- Supplemental
+  - DRB model data
+  - Reservoir representations
+  - Streamflow prediction in ungauged basins
+  - Synthetic streamflow generation
 
 
 
