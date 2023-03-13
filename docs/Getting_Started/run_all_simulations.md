@@ -12,7 +12,7 @@ python drb.py run
 >You may receive warnings that the `drb_output.hdf5` output file could not be updated while running the model. Ignore this until the model has completed its run.  See additional troubleshooting if the `drb_output.hdf5` is not updated once the model has completed its run.
 
 
-### Run all simulations
+## Run all simulations
 
 To run the Pywr-DRB model using all available streamflow inputs (Historic Reconstruction, NHM, NWM, and WEAP) run the following command:
 ```bash
@@ -21,16 +21,16 @@ bash drb_run_all.sh
 
 Results will be stored in the `output_data/` folder.
 
-### Run simulation of historic conditions
+## Run simulation of historic conditions
 
 
 
-### Generate figures
+## Generate figures
 
 ```bash
 python3 drb_make_figs.py
 ```
 
-#### Output figures
+### Output figures
 
-##### Summary statistic radial plot
+#### Summary statistic radial plot

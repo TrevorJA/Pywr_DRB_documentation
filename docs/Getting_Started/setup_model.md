@@ -1,3 +1,5 @@
+# Setup Model
+
 ## Accessing Pywr-DRB
 
 Begin by copying or downloading the project repository from GitHub, available [here](https://github.com/ahamilton144/DRB_water_management).
