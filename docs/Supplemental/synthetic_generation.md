@@ -1,16 +1,33 @@
-# Kirsch-Nowak Synthetic Ensemble Generator
 
-As the name implies, the Kirsch-Nowak synthetic generation method consists of two components.
+**********
+## Overview
+Why are we generating ensembles of flows?
+
+### Ensemble generation goals
+
+Exploratory, bottom-up policy assessments rely upon a sampling of a wide range of plausible scenarios (or streamflow conditions) and subsequent identification of consequential scenarios. Given that only a single historic streamflow timeseries is available, we generate a large set, or ensemble, of streamflow timeseries to explore via simulation.
+
+#### Goals of synthetic generation:
+1. Framework must be flexible enough to allow for drought not observed in the historic record, and include extreme events.
+2. Must approximately maintain historic statistical properties.
+3. Must provide parameters to adjust the severity of the scenario droughts.
+
+******
+## Kirsch-Nowak Synthetic Generator
+
+The Kirsch-Nowak synthetic streamflow generation method has been shown to produce streamflow timeseries that maintain the historic streamflow statistics while capturing the large degree of internal variability inherent in the system.
+
+The Kirsch-Nowak synthetic generation method consists of two components.
 
 First, a bootstrapping technique combined with a Cholesky decomposition of the autocorrelation matrix are used to generate an ensemble of flows which preserves historic cross-site correlation and inter-site temporal correlation. (This is the *Kirsch* part of the Kirsch-Nowak generator.)
 
 The monthly flows are then disaggregated, converted from monthly flows to daily flow values using the method presented in [Nowak et al. (2010)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2009WR008530).
 
-## Kirsch monthly streamflow generator
+### Kirsch monthly streamflow generator
 
-This method uses a bootstrap technique to sample from the historic record in a way that maintains cross-site correlations.  Additionally, a Cholesky decomposition of the historic autocorrelation matrix to impose inter-site temporal correlation.
+Also known as the *modified Fractional Gaussian Noise* generator. This method bootstrap technique to sample from the historic record in a way that maintains cross-site correlations.  Additionally, a Cholesky decomposition of the historic autocorrelation matrix to impose inter-site temporal correlation.
 
-This method is presented in detail in Kirsch et al. 2013.
+This method is presented in detail in [[Kirsch et al. 2013]].
 
 Given historic streamflow at $m$ sites, $Q_H \in \mathcal{R}^{N_h \times T}$, where $N_H$ is the number of years and $T$ is the timesteps per year.
 
@@ -28,7 +45,7 @@ The indices matrix $M$ is used to perform the bootstrap resampling for each site
 
 The autocorrelation is then imposed at each site using site-specific historic autocorrelation matrix $P_H = \text{corr}(Z_H)$, in which $P_{H_{i,j}}$ is the historic correlation between week $i$ and week $j$.
 
-Using #CholeskyDecomposition, $P_H$ can be factored into triangular matrices: $P_H = U^TU$.
+Using Cholesky Decomposition, $P_H$ can be factored into triangular matrices: $P_H = U^TU$.
 
 Then, the synthetic standard normal variables are:
 $$Z = CU$$ which are transformed back into real-space flows following:
@@ -37,3 +54,13 @@ $$Q_{S_{i,j}} = \text{exp}(\hat{\mu}_j + Z_{S_{i,j}}\hat{\sigma}_j)$$
 Then, inter-year correlations are preserved by repeating this process starting in week 27 and ending in week 26 of the following year, and constructing $Q_H^`$, $U^`$, $C^`$, and $Z^`$.
 
 The final synthetic timeseries is then a combination of $Z[27:52]$ and $Z^`[1:26]$.
+
+## Nowak disaggregation to daily flows
+
+This method is presented in greater detail in the publication, [Nowak et al. (2010)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2009WR008530).
+
+
+****
+## Resources
+(1) [Kirsch et al. (2013)](https://ascelibrary.org/doi/abs/10.1061/(ASCE)WR.1943-5452.0000287)
+(2) [Nowak et al. (2010)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2009WR008530)
