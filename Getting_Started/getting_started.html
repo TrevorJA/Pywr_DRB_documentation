@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Getting_Started/getting_started';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Accessing Pywr-DRB" href="setup_model.html" />
-    <link rel="prev" title="Model Overview" href="../Model/model_overview.html" />
+    <link rel="next" title="Setup Model" href="setup_model.html" />
+    <link rel="prev" title="Pywr-DRB" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,25 +157,22 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Model/pywr_drb_model.html">Pywr-DRB Model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Model/model_overview.html">Model Overview</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="setup_model.html">Accessing Pywr-DRB</a></li>
-
-
-<li class="toctree-l2"><a class="reference internal" href="simulate_historic.html">Simulate historic conditions</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup_model.html">Setup Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="run_all_simulations.html">Running model simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../API_References/api_references.html">References</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../API_References/model_construction.html">Model Construction</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../API_References/api_references.html">References</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../API_References/function_references.html">Function References</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Supplemental/supplemental.html">Supplemental Material</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Supplemental/supplemental.html">Supplemental Material</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Supplemental/data_summary.html">Summary of data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Supplemental/pub.html">Prediction in ungauged basins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supplemental/synthetic_generation.html">Overview</a></li>
+
+
+
 </ul>
 </li>
 </ul>
@@ -377,10 +374,7 @@ document.write(`
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="setup_model.html">Accessing Pywr-DRB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setup_model.html#dependencies">Dependencies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setup_model.html#executables">Executables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulate_historic.html">Simulate historic conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_model.html">Setup Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="run_all_simulations.html">Running model simulations</a></li>
 </ul>
 </div>
@@ -415,12 +409,12 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Model/model_overview.html"
+       href="../intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Model Overview</p>
+        <p class="prev-next-title">Pywr-DRB</p>
       </div>
     </a>
     <a class="right-next"
@@ -428,7 +422,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Accessing Pywr-DRB</p>
+        <p class="prev-next-title">Setup Model</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

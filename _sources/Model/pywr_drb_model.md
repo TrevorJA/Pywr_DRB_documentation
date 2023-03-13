@@ -1,3 +1,0 @@
-# Pywr-DRB Model
-```{tableofcontents}
-```
