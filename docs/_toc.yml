@@ -5,14 +5,22 @@ format: jb-book
 root: intro.md
 parts:
 - chapters:
-  - file: UserGuide/user_guide.md
+  - file: Model/pywr_drb_model.md
     sections:
-    - file: UserGuide/getting_started.md
-  - file: Tutorials/tutorials.md
+    - file: Model/model_overview.md
+    - file: Model/model_design.md
+  - file: Getting_Started/getting_started.md
     sections:
-    - file: Tutorials/run_baseline.md
-    - file: Tutorials/run_multiple_scenarios.md
+    - file: Getting_Started/setup_model.md
+    - file: Getting_Started/simulate_historic.md
+    - file: Getting_Started/run_all_simulations.md
+  - file: API_References/api_references.md
+    sections:
+    - file: API_References/model_construction.md
+    - file: API_References/model_execution.md
+    - file: API_References/custom_parameters.md
   - file: Supplemental/supplemental.md
     sections:
-    - file: Supplemental/kirsch_nowak_method.md
+    - file: Supplemental/data_summary.md
     - file: Supplemental/pub.md
+    - file: Supplemental/kirsch_nowak_method.md

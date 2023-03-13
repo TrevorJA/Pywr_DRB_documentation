@@ -1,3 +1,3 @@
-# Explanations
+# Getting Started
 ```{tableofcontents}
 ```

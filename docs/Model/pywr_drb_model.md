@@ -1,3 +1,3 @@
-# User Guide
+# Pywr-DRB Model
 ```{tableofcontents}
 ```
