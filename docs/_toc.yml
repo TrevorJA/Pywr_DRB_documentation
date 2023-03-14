@@ -7,7 +7,7 @@ root: intro.md
 parts:
   - caption: Pywr-DRB Model Description # =============== Model & DRB description =================
     chapters:
-    - file: Model/model_description.md
+    - file: Model/overview.md
       sections:
         - title: Delaware River Basin
           file: Model/DRB/drb_overview.md
@@ -42,7 +42,7 @@ parts:
               file: Getting_Started/Interpret_Results/all_figures.md
   - caption: References  # =============== References =================
     chapters:
-    - file: API_References/function_references.md
+    - file: API_References/api_references.md
       sections:
         - title: prep_input_data.py
           file: API_References/prep_input_data.md

@@ -1,4 +1,4 @@
-### `prep_input_data.py`
+# `prep_input_data.py`
 
 #### `read_modeled_estimates(filename, sep, date_label, site_label, streamflow_label, start_date, end_date)`
 

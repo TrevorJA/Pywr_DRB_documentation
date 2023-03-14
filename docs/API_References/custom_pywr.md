@@ -1,4 +1,4 @@
-### `custom_pywr.py`
+# `custom_pywr.py`
 
 This code defines a class called `FfmpNycRunningAvgParameter` which is used to implement the Flexible Flow Management Program within the Pywr-DRB model.
 

@@ -1,4 +1,4 @@
-### `drb_run_all.sh`
+# `drb_run_all.sh`
 
 This shell script is uses to execute the Pywr-DRB simulation using all available inflow data types, and then makes all figures.
 

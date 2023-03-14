@@ -20,6 +20,5 @@ Four alternative streamflow records are available for simulation, including:
 >Streamflows throughout the basin are generated within a [WEAP model](https://www.weap21.org/index.asp) model of the basin. These streamflows have been gathered from the model and are available as comparative inputs.  
 
 
-## Accessing data
 
-WaterProgramming blog post by Trevor Amestoy: [[Efficient hydroclimatic data accessing with HyRiver for Python]]
+## Accessing data

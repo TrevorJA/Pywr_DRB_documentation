@@ -1,2 +1,2 @@
-## Running Simulations in Pywr-DRB
+# Running Simulations in Pywr-DRB
 ```{tableofcontents}

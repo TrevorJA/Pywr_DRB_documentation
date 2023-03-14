@@ -1,4 +1,4 @@
-### `drb_run_sim.py`
+# `drb_run_sim.py`
 
 The code then processes command line arguments to execute a simulation of the Pywr-DRB model.
 

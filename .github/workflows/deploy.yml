@@ -48,9 +48,9 @@ jobs:
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
     # update kernel of all jupyter notebooks to venv to match GH action environment
-    - name: Update Jupyter Notebook kernels
-      run: python docs/update_jupyter_kernels.py venv |
-           python -m ipykernel install --user --name=venv
+    #- name: Update Jupyter Notebook kernels
+    #  run: python docs/update_jupyter_kernels.py venv |
+    #       python -m ipykernel install --user --name=venv
 
     # install R
     # - name: Install R

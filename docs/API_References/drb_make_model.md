@@ -1,6 +1,6 @@
-### `drb_make_model.py`
+# `drb_make_model.py`
 
-#### `add_major_node(model, name, node_type, inflow_type, backup_inflow_type=None, outflow_type=None, downstream_node=None, initial_volume=None, initial_volume_perc=None, variable_cost=None)`
+## `add_major_node(model, name, node_type, inflow_type, backup_inflow_type=None, outflow_type=None, downstream_node=None, initial_volume=None, initial_volume_perc=None, variable_cost=None)`
 
 Add a major node to the model. Major nodes types include reservoir & river. This function will add the major node and all standard minor nodes that belong to each major node ( i.e., catchment, withdrawal, consumption, outflow), along with their standard parameters and edges. All nodes, edges, and parameters are added to the model dict, which is then returned.
 
@@ -20,7 +20,8 @@ Returns:
 -   `model` (dict): the updated model dict, with all nodes, edges, and parameters added.
 
 
-#### `drb_make_model(inflow_type, backup_inflow_type, start_date, end_date, use_hist_NycNjDeliveries=True)`
+***
+## `drb_make_model(inflow_type, backup_inflow_type, start_date, end_date, use_hist_NycNjDeliveries=True)`
 
 This function creates the JSON file used by Pywr to define the model. This includes all nodes, edges, and parameters.
 
@@ -34,8 +35,8 @@ Parameters
 Returns
 - None
 
-
-#### `create_starfit_params()`
+***
+## `create_starfit_params()`
 
 This function `create_starfit_params` takes two arguments `d` which is a dictionary of parameters and `r` which is a string representing the name of a reservoir. The function generates and stores relevant parameters associated with simulating the behavior of a reservoir using the STARFIT rule type in the input dictionary.
 
