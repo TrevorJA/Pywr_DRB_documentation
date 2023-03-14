@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Function References &#8212; Pywr-DRB &lt;br&gt; Integrated Water Resource Management Model</title>
+    <title>drb_make_model.py &#8212; Pywr-DRB &lt;br&gt; Integrated Water Resource Management Model</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'API_References/function_references';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'API_References/drb_make_model';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Supplemental Material" href="../Supplemental/supplemental.html" />
-    <link rel="prev" title="References" href="api_references.html" />
+    <link rel="next" title="drb_run_sim.py" href="drb_run_sim.html" />
+    <link rel="prev" title="prep_input_data.py" href="prep_input_data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,23 +156,47 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Getting_Started/getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Pywr-DRB Model Description</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Overview/overview.html">Pywr-DRB Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Overview/Model/pywr_drb_overview.html">Pywr-DRB Model</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Getting_Started/getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Getting_Started/setup_model.html">Setup Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Getting_Started/run_all_simulations.html">Running model simulations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Getting_Started/Running_Simulations/running_simulations.html">Running Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Running_Simulations/run_all_simulations.html">Run all simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Running_Simulations/run_historic_simulation.html">Run historic simulation</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="api_references.html">References</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Function References</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Getting_Started/Interpret_Results/interpret_results.html">Interpret results</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Interpret_Results/model_outputs.html">Model Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Interpret_Results/all_figures.html">Figures</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Supplemental/supplemental.html">Supplemental Material</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Supplemental/data_summary.html">Summary of data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Supplemental/pub.html">Prediction in ungauged basins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Supplemental/synthetic_generation.html">Overview</a></li>
-
-
-
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="api_references.html">API References</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="prep_input_data.html">prep_input_data.py</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">drb_make_model.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drb_run_sim.html">drb_run_sim.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drb_run_all.html">drb_run_all.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_pywr.html">custom_pywr.py</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supplemental</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Supplemental/supplemental.html">Supplemental Material</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Supplemental/data_summary.html">Data Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supplemental/pub.html">Streamflow Prediction in Ungauged Basins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supplemental/synthetic_generation.html">Synthetic Streamflow Generation</a></li>
 </ul>
 </li>
 </ul>
@@ -246,7 +270,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/ahamilton144/DRB_water_management/issues/new?title=Issue%20on%20page%20%2FAPI_References/function_references.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ahamilton144/DRB_water_management/issues/new?title=Issue%20on%20page%20%2FAPI_References/drb_make_model.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -276,7 +300,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/API_References/function_references.md" target="_blank"
+      <li><a href="../_sources/API_References/drb_make_model.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -358,7 +382,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Function References</h1>
+    <h1>drb_make_model.py</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -368,18 +392,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model-py"><code class="docutils literal notranslate"><span class="pre">drb_make_model.py</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-major-node-model-name-node-type-inflow-type-backup-inflow-type-none-outflow-type-none-downstream-node-none-initial-volume-none-initial-volume-perc-none-variable-cost-none"><code class="docutils literal notranslate"><span class="pre">add_major_node(model,</span> <span class="pre">name,</span> <span class="pre">node_type,</span> <span class="pre">inflow_type,</span> <span class="pre">backup_inflow_type=None,</span> <span class="pre">outflow_type=None,</span> <span class="pre">downstream_node=None,</span> <span class="pre">initial_volume=None,</span> <span class="pre">initial_volume_perc=None,</span> <span class="pre">variable_cost=None)</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model-inflow-type-backup-inflow-type-start-date-end-date-use-hist-nycnjdeliveries-true"><code class="docutils literal notranslate"><span class="pre">drb_make_model(inflow_type,</span> <span class="pre">backup_inflow_type,</span> <span class="pre">start_date,</span> <span class="pre">end_date,</span> <span class="pre">use_hist_NycNjDeliveries=True)</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-starfit-params"><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prep-input-data-py"><code class="docutils literal notranslate"><span class="pre">prep_input_data.py</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-modeled-estimates-filename-sep-date-label-site-label-streamflow-label-start-date-end-date"><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates(filename,</span> <span class="pre">sep,</span> <span class="pre">date_label,</span> <span class="pre">site_label,</span> <span class="pre">streamflow_label,</span> <span class="pre">start_date,</span> <span class="pre">end_date)</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#match-gages">match_gages()</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-pywr-py"><code class="docutils literal notranslate"><span class="pre">custom_pywr.py</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-major-node-model-name-node-type-inflow-type-backup-inflow-type-none-outflow-type-none-downstream-node-none-initial-volume-none-initial-volume-perc-none-variable-cost-none"><code class="docutils literal notranslate"><span class="pre">add_major_node(model,</span> <span class="pre">name,</span> <span class="pre">node_type,</span> <span class="pre">inflow_type,</span> <span class="pre">backup_inflow_type=None,</span> <span class="pre">outflow_type=None,</span> <span class="pre">downstream_node=None,</span> <span class="pre">initial_volume=None,</span> <span class="pre">initial_volume_perc=None,</span> <span class="pre">variable_cost=None)</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model-inflow-type-backup-inflow-type-start-date-end-date-use-hist-nycnjdeliveries-true"><code class="docutils literal notranslate"><span class="pre">drb_make_model(inflow_type,</span> <span class="pre">backup_inflow_type,</span> <span class="pre">start_date,</span> <span class="pre">end_date,</span> <span class="pre">use_hist_NycNjDeliveries=True)</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-starfit-params"><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -391,12 +406,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="function-references">
-<h1>Function References<a class="headerlink" href="#function-references" title="Permalink to this heading">#</a></h1>
-<section id="drb-make-model-py">
-<h2><code class="docutils literal notranslate"><span class="pre">drb_make_model.py</span></code><a class="headerlink" href="#drb-make-model-py" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="drb-make-model-py">
+<h1><code class="docutils literal notranslate"><span class="pre">drb_make_model.py</span></code><a class="headerlink" href="#drb-make-model-py" title="Permalink to this heading">#</a></h1>
 <section id="add-major-node-model-name-node-type-inflow-type-backup-inflow-type-none-outflow-type-none-downstream-node-none-initial-volume-none-initial-volume-perc-none-variable-cost-none">
-<h3><code class="docutils literal notranslate"><span class="pre">add_major_node(model,</span> <span class="pre">name,</span> <span class="pre">node_type,</span> <span class="pre">inflow_type,</span> <span class="pre">backup_inflow_type=None,</span> <span class="pre">outflow_type=None,</span> <span class="pre">downstream_node=None,</span> <span class="pre">initial_volume=None,</span> <span class="pre">initial_volume_perc=None,</span> <span class="pre">variable_cost=None)</span></code><a class="headerlink" href="#add-major-node-model-name-node-type-inflow-type-backup-inflow-type-none-outflow-type-none-downstream-node-none-initial-volume-none-initial-volume-perc-none-variable-cost-none" title="Permalink to this heading">#</a></h3>
+<h2><code class="docutils literal notranslate"><span class="pre">add_major_node(model,</span> <span class="pre">name,</span> <span class="pre">node_type,</span> <span class="pre">inflow_type,</span> <span class="pre">backup_inflow_type=None,</span> <span class="pre">outflow_type=None,</span> <span class="pre">downstream_node=None,</span> <span class="pre">initial_volume=None,</span> <span class="pre">initial_volume_perc=None,</span> <span class="pre">variable_cost=None)</span></code><a class="headerlink" href="#add-major-node-model-name-node-type-inflow-type-backup-inflow-type-none-outflow-type-none-downstream-node-none-initial-volume-none-initial-volume-perc-none-variable-cost-none" title="Permalink to this heading">#</a></h2>
 <p>Add a major node to the model. Major nodes types include reservoir &amp; river. This function will add the major node and all standard minor nodes that belong to each major node ( i.e., catchment, withdrawal, consumption, outflow), along with their standard parameters and edges. All nodes, edges, and parameters are added to the model dict, which is then returned.</p>
 <p>Parameters:</p>
 <ul class="simple">
@@ -416,8 +429,9 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> (dict): the updated model dict, with all nodes, edges, and parameters added.</p></li>
 </ul>
 </section>
+<hr class="docutils" />
 <section id="drb-make-model-inflow-type-backup-inflow-type-start-date-end-date-use-hist-nycnjdeliveries-true">
-<h3><code class="docutils literal notranslate"><span class="pre">drb_make_model(inflow_type,</span> <span class="pre">backup_inflow_type,</span> <span class="pre">start_date,</span> <span class="pre">end_date,</span> <span class="pre">use_hist_NycNjDeliveries=True)</span></code><a class="headerlink" href="#drb-make-model-inflow-type-backup-inflow-type-start-date-end-date-use-hist-nycnjdeliveries-true" title="Permalink to this heading">#</a></h3>
+<h2><code class="docutils literal notranslate"><span class="pre">drb_make_model(inflow_type,</span> <span class="pre">backup_inflow_type,</span> <span class="pre">start_date,</span> <span class="pre">end_date,</span> <span class="pre">use_hist_NycNjDeliveries=True)</span></code><a class="headerlink" href="#drb-make-model-inflow-type-backup-inflow-type-start-date-end-date-use-hist-nycnjdeliveries-true" title="Permalink to this heading">#</a></h2>
 <p>This function creates the JSON file used by Pywr to define the model. This includes all nodes, edges, and parameters.</p>
 <p>Parameters</p>
 <ul class="simple">
@@ -432,56 +446,14 @@ document.write(`
 <li><p>None</p></li>
 </ul>
 </section>
+<hr class="docutils" />
 <section id="create-starfit-params">
-<h3><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code><a class="headerlink" href="#create-starfit-params" title="Permalink to this heading">#</a></h3>
+<h2><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code><a class="headerlink" href="#create-starfit-params" title="Permalink to this heading">#</a></h2>
 <p>This function <code class="docutils literal notranslate"><span class="pre">create_starfit_params</span></code> takes two arguments <code class="docutils literal notranslate"><span class="pre">d</span></code> which is a dictionary of parameters and <code class="docutils literal notranslate"><span class="pre">r</span></code> which is a string representing the name of a reservoir. The function generates and stores relevant parameters associated with simulating the behavior of a reservoir using the STARFIT rule type in the input dictionary.</p>
 <p>The function first initializes two boolean variables <code class="docutils literal notranslate"><span class="pre">starfit_remove_Rmax</span></code> and <code class="docutils literal notranslate"><span class="pre">starfit_linear_below_NOR</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code>. Then it proceeds to generate various constant parameters associated with the STARFIT rule type for the input reservoir. Each parameter has a unique key in the dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code>.</p>
 <p>Next, the function generates a list of aggregated parameters. Each aggregated parameter is generated using a function (sum, max, product) applied to a list of constant or other aggregated parameters. These aggregated parameters also have unique keys in the dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code>.</p>
 <p>The function conditionally generates two additional aggregated parameters based on the values of <code class="docutils literal notranslate"><span class="pre">starfit_linear_below_NOR</span></code> and <code class="docutils literal notranslate"><span class="pre">starfit_remove_Rmax</span></code>. If <code class="docutils literal notranslate"><span class="pre">starfit_linear_below_NOR</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, an aggregated parameter called <code class="docutils literal notranslate"><span class="pre">belowNOR_final</span></code> is generated using the <code class="docutils literal notranslate"><span class="pre">Release_min_final</span></code> parameter. If <code class="docutils literal notranslate"><span class="pre">starfit_remove_Rmax</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, an aggregated parameter called <code class="docutils literal notranslate"><span class="pre">neg_NORhi_final_unnorm</span></code> is generated using the <code class="docutils literal notranslate"><span class="pre">NORhi_final</span></code> parameter.</p>
 <p>The final dictionary of parameters <code class="docutils literal notranslate"><span class="pre">d</span></code> is returned.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="prep-input-data-py">
-<h2><code class="docutils literal notranslate"><span class="pre">prep_input_data.py</span></code><a class="headerlink" href="#prep-input-data-py" title="Permalink to this heading">#</a></h2>
-<section id="read-modeled-estimates-filename-sep-date-label-site-label-streamflow-label-start-date-end-date">
-<h3><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates(filename,</span> <span class="pre">sep,</span> <span class="pre">date_label,</span> <span class="pre">site_label,</span> <span class="pre">streamflow_label,</span> <span class="pre">start_date,</span> <span class="pre">end_date)</span></code><a class="headerlink" href="#read-modeled-estimates-filename-sep-date-label-site-label-streamflow-label-start-date-end-date" title="Permalink to this heading">#</a></h3>
-<p>This function reads in streamflow data from modeled NHM/NWM estimates, preps the data for use in Pywr, and returns a dataframe.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filename</span></code>: the name of the file containing the data to be read.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sep</span></code>: the delimiter used to separate values in the file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">date_label</span></code>: the label used to identify the date column in the file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">site_label</span></code>: the label used to identify the site column in the file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">streamflow_label</span></code>: the label used to identify the streamflow column in the file.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start_date</span></code>: the start date for the data to be included.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">end_date</span></code>: the end date for the data to be included.</p></li>
-</ul>
-<p>The function first reads in the data from the specified file and filters it based on the start and end dates. It then restructures the data to have gages as columns, and converts the streamflow values from cubic meters per second (cms) to million gallons per day (mgd).
-The function returns a dataframe with the restructured data.</p>
-</section>
-<section id="match-gages">
-<h3>match_gages()<a class="headerlink" href="#match-gages" title="Permalink to this heading">#</a></h3>
-<p>This is a function written in Python for matching USGS gage sites to nodes in Pywr-DRB and handling cases where the gage is located downstream of a reservoir or other nodes. It takes as input a pandas dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code> containing the USGS gage data, a string <code class="docutils literal notranslate"><span class="pre">dataset_label</span></code> to label the output file, and a boolean <code class="docutils literal notranslate"><span class="pre">use_pub</span></code> that determines whether to use additional modeled gage data. The function returns a pandas dataframe whose columns are the names of Pywr-DRB nodes.</p>
-<p>The function first reads in additional modeled gage data if <code class="docutils literal notranslate"><span class="pre">use_pub</span></code> is True. Then, it defines a dictionary <code class="docutils literal notranslate"><span class="pre">site_matches_reservoir</span></code> that matches gages to reservoir catchments and a list of lists <code class="docutils literal notranslate"><span class="pre">site_matches_link</span></code> containing mainstem nodes, matching USGS gages, and upstream nodes to subtract.</p>
-<p>For each site, the function determines whether it is a reservoir or not based on the site name. If the site is a reservoir, the matched gage is downstream, so the function assumes that the flow into the reservoir comes from the upstream catchment. If the site is not a reservoir, the function subtracts upstream reservoir inflows from the flow at the mainstem USGS gage.</p>
-<p>The function saves the resulting dataframe as a CSV file and returns it.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="custom-pywr-py">
-<h2><code class="docutils literal notranslate"><span class="pre">custom_pywr.py</span></code><a class="headerlink" href="#custom-pywr-py" title="Permalink to this heading">#</a></h2>
-<p>This code defines a class called <code class="docutils literal notranslate"><span class="pre">FfmpNycRunningAvgParameter</span></code> which inherits from the <code class="docutils literal notranslate"><span class="pre">Parameter</span></code> class.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method takes in several arguments:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: an instance of a model</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code>: a node object</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_avg_delivery</span></code>: a parameter object that represents the maximum average delivery</p></li>
-</ul>
-<p>In the <code class="docutils literal notranslate"><span class="pre">setup</span></code> method, an empty array is created to hold the parameter state. The size of this array is the number of scenarios in the model.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">reset</span></code> method sets the initial value of the parameter, calculates the timestep and datetime, and sets the max_delivery array to the max_avg_delivery multiplied by the timestep.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">value</span></code> method returns the current volume remaining for the scenario.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">after</span></code> method updates the max_delivery array based on the current datetime. If the current date is May 31st, the max_delivery array is reset to the max_avg_delivery multiplied by the timestep. If it is not May 31st, the max_delivery array is updated based on the running average formula: maxdel_t = maxdel_{t-1} - flow_{t-1} + max_avg_del. The max_delivery array is also updated to ensure that it cannot be less than zero. The datetime is also updated for the next day.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">load</span></code> method is a class method that takes in the model, data, and loads the parameter object with the data passed in.</p>
 </section>
 </section>
 
@@ -514,20 +486,20 @@ The function returns a dataframe with the restructured data.</p>
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="api_references.html"
+       href="prep_input_data.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">prep_input_data.py</span></code></p>
       </div>
     </a>
     <a class="right-next"
-       href="../Supplemental/supplemental.html"
+       href="drb_run_sim.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Supplemental Material</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">drb_run_sim.py</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -546,18 +518,9 @@ The function returns a dataframe with the restructured data.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model-py"><code class="docutils literal notranslate"><span class="pre">drb_make_model.py</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-major-node-model-name-node-type-inflow-type-backup-inflow-type-none-outflow-type-none-downstream-node-none-initial-volume-none-initial-volume-perc-none-variable-cost-none"><code class="docutils literal notranslate"><span class="pre">add_major_node(model,</span> <span class="pre">name,</span> <span class="pre">node_type,</span> <span class="pre">inflow_type,</span> <span class="pre">backup_inflow_type=None,</span> <span class="pre">outflow_type=None,</span> <span class="pre">downstream_node=None,</span> <span class="pre">initial_volume=None,</span> <span class="pre">initial_volume_perc=None,</span> <span class="pre">variable_cost=None)</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model-inflow-type-backup-inflow-type-start-date-end-date-use-hist-nycnjdeliveries-true"><code class="docutils literal notranslate"><span class="pre">drb_make_model(inflow_type,</span> <span class="pre">backup_inflow_type,</span> <span class="pre">start_date,</span> <span class="pre">end_date,</span> <span class="pre">use_hist_NycNjDeliveries=True)</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-starfit-params"><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prep-input-data-py"><code class="docutils literal notranslate"><span class="pre">prep_input_data.py</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-modeled-estimates-filename-sep-date-label-site-label-streamflow-label-start-date-end-date"><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates(filename,</span> <span class="pre">sep,</span> <span class="pre">date_label,</span> <span class="pre">site_label,</span> <span class="pre">streamflow_label,</span> <span class="pre">start_date,</span> <span class="pre">end_date)</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#match-gages">match_gages()</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-pywr-py"><code class="docutils literal notranslate"><span class="pre">custom_pywr.py</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-major-node-model-name-node-type-inflow-type-backup-inflow-type-none-outflow-type-none-downstream-node-none-initial-volume-none-initial-volume-perc-none-variable-cost-none"><code class="docutils literal notranslate"><span class="pre">add_major_node(model,</span> <span class="pre">name,</span> <span class="pre">node_type,</span> <span class="pre">inflow_type,</span> <span class="pre">backup_inflow_type=None,</span> <span class="pre">outflow_type=None,</span> <span class="pre">downstream_node=None,</span> <span class="pre">initial_volume=None,</span> <span class="pre">initial_volume_perc=None,</span> <span class="pre">variable_cost=None)</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model-inflow-type-backup-inflow-type-start-date-end-date-use-hist-nycnjdeliveries-true"><code class="docutils literal notranslate"><span class="pre">drb_make_model(inflow_type,</span> <span class="pre">backup_inflow_type,</span> <span class="pre">start_date,</span> <span class="pre">end_date,</span> <span class="pre">use_hist_NycNjDeliveries=True)</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-starfit-params"><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></a></li>
 </ul>
   </nav></div>
 

@@ -1,4 +1,4 @@
-# Running model simulations
+# Run all model simulations
 
 ## Executing the model
 

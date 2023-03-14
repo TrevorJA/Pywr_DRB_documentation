@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="Getting_Started/getting_started.html" />
+    <link rel="next" title="Pywr-DRB Overview" href="Overview/overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -155,23 +155,47 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Getting_Started/getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Pywr-DRB Model Description</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Overview/overview.html">Pywr-DRB Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Overview/Model/pywr_drb_overview.html">Pywr-DRB Model</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Getting_Started/getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Getting_Started/setup_model.html">Setup Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Getting_Started/run_all_simulations.html">Running model simulations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="Getting_Started/Running_Simulations/running_simulations.html">Running Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="Getting_Started/Running_Simulations/run_all_simulations.html">Run all simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Getting_Started/Running_Simulations/run_historic_simulation.html">Run historic simulation</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="API_References/api_references.html">References</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="API_References/function_references.html">Function References</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="Getting_Started/Interpret_Results/interpret_results.html">Interpret results</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="Getting_Started/Interpret_Results/model_outputs.html">Model Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Getting_Started/Interpret_Results/all_figures.html">Figures</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Supplemental/supplemental.html">Supplemental Material</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Supplemental/data_summary.html">Summary of data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supplemental/pub.html">Prediction in ungauged basins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html">Overview</a></li>
-
-
-
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="API_References/api_references.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="API_References/prep_input_data.html">prep_input_data.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="API_References/drb_make_model.html">drb_make_model.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="API_References/drb_run_sim.html">drb_run_sim.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="API_References/drb_run_all.html">drb_run_all.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="API_References/custom_pywr.html">custom_pywr.py</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supplemental</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Supplemental/supplemental.html">Supplemental Material</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/data_summary.html">Data Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/pub.html">Streamflow Prediction in Ungauged Basins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html">Synthetic Streamflow Generation</a></li>
 </ul>
 </li>
 </ul>
@@ -369,14 +393,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pywr-DRB</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-overview">Model Overview</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-goals">Model Goals</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-design">Model design</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#represented-components">Represented components</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgments">Acknowledgments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
 </ul>
@@ -402,55 +418,57 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="contents">
 <h1>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pywr-DRB Model Description</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Getting_Started/getting_started.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Getting_Started/setup_model.html">Setup Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Getting_Started/run_all_simulations.html">Running model simulations</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="API_References/api_references.html">References</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="API_References/function_references.html">Function References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Supplemental/supplemental.html">Supplemental Material</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Supplemental/data_summary.html">Summary of data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supplemental/pub.html">Prediction in ungauged basins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html#kirsch-nowak-synthetic-generator">Kirsch-Nowak Synthetic Generator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html#nowak-disaggregation-to-daily-flows">Nowak disaggregation to daily flows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html#resources">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Overview/overview.html">Pywr-DRB Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Overview/Model/pywr_drb_overview.html">Pywr-DRB Model</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<section id="model-overview">
-<h2>Model Overview<a class="headerlink" href="#model-overview" title="Permalink to this heading">#</a></h2>
-<p>Pywr-DRB is an integrated water resource model of the Delaware River Basin (DRB) designed to assist in water resource decision making within the basin.</p>
-<p>The model is build using <a class="reference external" href="https://pywr.github.io/pywr/index.html">Pywr</a>, a opensource Python package for constructing resource allocation models.</p>
-<section id="model-goals">
-<h3>Model Goals<a class="headerlink" href="#model-goals" title="Permalink to this heading">#</a></h3>
-<p>The Pywr-DRB model was constructed with the following goals:</p>
-<ol class="arabic simple">
-<li><p>Accurately represent water management policy across the DRB</p></li>
-<li><p>Allow for simulation of historic and future water supply conditions</p></li>
-</ol>
-</section>
-<section id="model-design">
-<h3>Model design<a class="headerlink" href="#model-design" title="Permalink to this heading">#</a></h3>
-<p>The Pywr-DRB model is designed to recieve streamflow timeseries at 18 upstream catchments and 3 mainstem locations as inputs. The model simulates and outputs water supply deliveries, reservoir releases and storage levels, and streamflow volumes throughout the basin on a daily timestep.</p>
-<section id="represented-components">
-<h4>Represented components<a class="headerlink" href="#represented-components" title="Permalink to this heading">#</a></h4>
-<p>The Pywr-DRB model includes representation of the following:</p>
-<ul class="simple">
-<li><p>Historic and future streamflow throughout the basin</p></li>
-<li><p>Distributed water deliveries within the basin</p></li>
-<li><p>Water deliveries to NYC and NJ</p></li>
-<li><p>Reservoirs across the basin</p></li>
-<li><p>Regulation governing reservoir operations</p></li>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Getting_Started/getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Getting_Started/setup_model.html">Setup Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Getting_Started/Running_Simulations/running_simulations.html">Running Simulations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Getting_Started/Running_Simulations/run_all_simulations.html">Run all simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Getting_Started/Running_Simulations/run_historic_simulation.html">Run historic simulation</a></li>
 </ul>
-</section>
-</section>
-</section>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Getting_Started/Interpret_Results/interpret_results.html">Interpret results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Getting_Started/Interpret_Results/model_outputs.html">Model Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Getting_Started/Interpret_Results/all_figures.html">Figures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="API_References/api_references.html">API References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="API_References/prep_input_data.html">prep_input_data.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="API_References/drb_make_model.html">drb_make_model.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="API_References/drb_run_sim.html">drb_run_sim.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="API_References/drb_run_all.html">drb_run_all.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="API_References/custom_pywr.html">custom_pywr.py</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supplemental</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Supplemental/supplemental.html">Supplemental Material</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/data_summary.html">Data Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/pub.html">Streamflow Prediction in Ungauged Basins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supplemental/synthetic_generation.html">Synthetic Streamflow Generation</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <section id="acknowledgments">
 <h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this heading">#</a></h2>
 <p>This work is done in partnership with the United States Geologic Survey (USGS) with the goal of supporting their <a class="reference external" href="https://www.usgs.gov/mission-areas/water-resources/science/integrated-water-availability-assessments-iwaas">Integrated Water Availability Assessments</a>. The project is an interagency collaboration effort with contributors from Cornell University, NCAR, PNNL, and LBNL.</p>
@@ -494,11 +512,11 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="right-next"
-       href="Getting_Started/getting_started.html"
+       href="Overview/overview.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Getting Started</p>
+        <p class="prev-next-title">Pywr-DRB Overview</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -519,14 +537,6 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pywr-DRB</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-overview">Model Overview</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-goals">Model Goals</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-design">Model design</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#represented-components">Represented components</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgments">Acknowledgments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
 </ul>
