@@ -2,7 +2,7 @@
 
 This shell script is uses to execute the Pywr-DRB simulation using all available inflow data types, and then makes all figures.
 
-For more information on the different inflow types see [Data Summary](../Supplemental/data_summary.md).
+For more information on the different inflow types see [Data Summary](../Supplemental/data_summary.html).
 
 
 ```bash

@@ -5,6 +5,21 @@ format: jb-book
 # =============== Landing Page =================
 root: intro.md
 parts:
+  - caption: Pywr-DRB Model Description # =============== Model & DRB description =================
+    chapters:
+    - file: Model/model_description.md
+      sections:
+        - title: Delaware River Basin
+          file: Model/DRB/drb_overview.md
+          sections:
+            - title: History
+              file: Model/DRB/drb_history.md
+            - title: Hydrology
+              file: Model/DRB/drb_hydrology.md
+            - title: Planning & Management
+              file: Model/DRB/drb_planning_management.md
+        - title: Pywr-DRB Model
+          file: Model/pywr_drb_overview.md
   - caption: Getting Started # =============== Getting Started =================
     chapters:
     - file: Getting_Started/getting_started.md
@@ -29,17 +44,17 @@ parts:
     chapters:
     - file: API_References/function_references.md
       sections:
-        - title: `prep_input_data.py`
+        - title: prep_input_data.py
           file: API_References/prep_input_data.md
-        - title: `drb_make_model.py`
+        - title: drb_make_model.py
           file: API_References/drb_make_model.md
-        - title: `drb_run_sim.py`
+        - title: drb_run_sim.py
           file: API_References/drb_run_sim.md
-        - title: `drb_run_all.sh`
+        - title: drb_run_all.sh
           file: API_References/drb_run_all.md
-        - title: `custom_pywr.py`
+        - title: custom_pywr.py
           file: API_References/custom_pywr.md
-  - caption: Supplemental  # =============== References =================
+  - caption: Supplemental  # =============== Supplemental  =================
     chapters:
     - file: Supplemental/supplemental.md
       sections:
