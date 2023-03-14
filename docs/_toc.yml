@@ -7,25 +7,25 @@ root: intro.md
 parts:
   - caption: Pywr-DRB Model Description # =============== Model & DRB description =================
     chapters:
-    - file: Model/overview.md
+    - file: Overview/overview.md
       sections:
         - title: Delaware River Basin
-          file: Model/DRB/drb_overview.md
+          file: Overview/DRB/drb_overview.md
           sections:
             - title: History
-              file: Model/DRB/drb_history.md
+              file: Overview/DRB/drb_history.md
             - title: Hydrology
-              file: Model/DRB/drb_hydrology.md
+              file: Overview/DRB/drb_hydrology.md
             - title: Planning & Management
-              file: Model/DRB/drb_planning_management.md
+              file: Overview/DRB/drb_planning_management.md
         - title: Pywr-DRB Model
-          file: Model/pywr_drb_overview.md
+          file: Overview/Model/pywr_drb_overview.md
   - caption: Getting Started # =============== Getting Started =================
     chapters:
     - file: Getting_Started/getting_started.md
       sections:
         - title: Setup Model
-          file: Getting_Started/setup_model
+          file: Getting_Started/setup_model.md
         - title: Running Simulations
           file: Getting_Started/Running_Simulations/running_simulations.md
           sections:
