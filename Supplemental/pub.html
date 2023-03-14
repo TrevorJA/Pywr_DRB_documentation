@@ -158,15 +158,11 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Pywr-DRB Model Description</span></p>
-<ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Overview/overview.html">Pywr-DRB Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Overview/Model/pywr_drb_overview.html">Pywr-DRB Model</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Getting_Started/getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Getting_Started/setup_model.html">Setup Model</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Getting_Started/Running_Simulations/running_simulations.html">Running Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -181,9 +177,6 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../API_References/api_references.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../API_References/prep_input_data.html">prep_input_data.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API_References/drb_make_model.html">drb_make_model.py</a></li>
@@ -192,9 +185,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../API_References/custom_pywr.html">custom_pywr.py</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supplemental</span></p>
-<ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="supplemental.html">Supplemental Material</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="data_summary.html">Data Summary</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Streamflow Prediction in Ungauged Basins</a></li>
@@ -427,10 +417,10 @@ document.write(`
 <p>The methods used and presented here are described in detail in <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018WR024463">Worland et al (2019)(1)</a> and [Worland et al (2020)(2)] respectively.</p>
 <section id="neural-net-prediction-of-flow-duration-curves">
 <h3>Neural Net Prediction of Flow Duration Curves<a class="headerlink" href="#neural-net-prediction-of-flow-duration-curves" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>[!warning] Method summary needed.
-Check back later for a summary of this method.</p>
-</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Details on neural net to be added later.</p>
+</div>
 </section>
 <section id="qppq-method-for-streamflow-timeseries-generation">
 <h3>QPPQ-Method for Streamflow Timeseries Generation<a class="headerlink" href="#qppq-method-for-streamflow-timeseries-generation" title="Permalink to this heading">#</a></h3>
@@ -444,16 +434,33 @@ Check back later for a summary of this method.</p>
 <li><p>Using estimated FDC for the target to map the donated nonexceedance timeseries, <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> back to streamflow.</p></li>
 </ol>
 <p>To limit the scope of this tutorial, let’s assume that an estimate of the FDC at the target site, <span class="math notranslate nohighlight">\(\hat{FDC}_{pred}\)</span>, has already been determined through some other statistical or observational study.</p>
-<p>Then the QPPQ method can be described more formally. Given an ungauged location with an estimated FDC, <span class="math notranslate nohighlight">\(\hat{FDC}_{pred}\)</span>, and set of observed streamflow timeseries <span class="math notranslate nohighlight">\(\mathbf{q_i}\)</span> at <span class="math notranslate nohighlight">\(K\)</span> neighboring sites, such that:
-$<span class="math notranslate nohighlight">\(Q_{obs} = \set{\mathbf{q_1}, \mathbf{q_2}, ..., \mathbf{q_k}}\)</span><span class="math notranslate nohighlight">\(
-With corresponding \)</span>K<span class="math notranslate nohighlight">\( FDCs at the observation locations:
-\)</span><span class="math notranslate nohighlight">\(FDC_{obs} = \set{FDC_1, FDC_2, ... , FDC_k}\)</span><span class="math notranslate nohighlight">\(
-The FDCs are used to convert the observed streamflow timeseries, \)</span>\mathbf{q_{obs, i}}<span class="math notranslate nohighlight">\(, to non-exceedance probability timeseries, \)</span>\mathbf{p_{obs, i}}<span class="math notranslate nohighlight">\(.
-\)</span><span class="math notranslate nohighlight">\(FDC_i : \mathbf{q_{i}} \to \mathbf{p_i}\)</span><span class="math notranslate nohighlight">\(
-We can then perform a weighted-aggregation of the non-exceedance probability timeseries to estimate the non-exceedance timeseries at the ungauged location. It is most common to apply an inverse-squared-distance weight to each observed timeseries such that:\)</span><span class="math notranslate nohighlight">\(\mathbf{p_{pred}} = \sum^k (\mathbf{p_i}w_i)\)</span><span class="math notranslate nohighlight">\( Where \)</span>w_i = 1 / d_i^2<span class="math notranslate nohighlight">\( where \)</span>d_i<span class="math notranslate nohighlight">\( is the distance from the observation \)</span>i<span class="math notranslate nohighlight">\( to the ungauged location, and \)</span>\sum^k w_i = 1$.</p>
-<p>Finally, the estimated FDC at the ungauged location, <span class="math notranslate nohighlight">\(\hat{FDC}_{pred}\)</span>, is used to convert the non-exceedance timeseries to streamflow timeseries:
-$<span class="math notranslate nohighlight">\(\hat{FDC}_{pred} : \mathbf{p_{pred}} \to \mathbf{q_{pred}}, \, \mathbf{P} = \set{\mathbf{p}_1, ..., \mathbf{p}_k}\)</span>$
-Looking at this formulation, and the sequence of transformations that take place, I hope it is clear why the method is rightfully called the <em>QPPQ method</em>.</p>
+<p>Then the QPPQ method can be described more formally. Given an ungauged location with an estimated FDC, <span class="math notranslate nohighlight">\(\hat{FDC}_{pred}\)</span>, and set of observed streamflow timeseries <span class="math notranslate nohighlight">\(\mathbf{q_i}\)</span> at <span class="math notranslate nohighlight">\(K\)</span> neighboring sites, such that:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{obs} = \set{\mathbf{q_1}, \mathbf{q_2}, ..., \mathbf{q_k}}
+\]</div>
+<p>With corresponding <span class="math notranslate nohighlight">\(K\)</span> FDCs at the observation locations:</p>
+<div class="math notranslate nohighlight">
+\[
+FDC_{obs} = \set{FDC_1, FDC_2, ... , FDC_k}
+\]</div>
+<p>The FDCs are used to convert the observed streamflow timeseries, <span class="math notranslate nohighlight">\(\mathbf{q_{obs, i}}\)</span>, to non-exceedance probability timeseries, <span class="math notranslate nohighlight">\(\mathbf{p_{obs, i}}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+FDC_i : \mathbf{q_{i}} \to \mathbf{p_i}
+\]</div>
+<p>We can then perform a weighted-aggregation of the non-exceedance probability timeseries to estimate the non-exceedance timeseries at the ungauged location. It is most common to apply an inverse-squared-distance weight to each observed timeseries such that:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{p_{pred}} = \sum^k (\mathbf{p_i}w_i)
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(w_i = 1 / d_i^2\)</span> where <span class="math notranslate nohighlight">\(d_i\)</span> is the distance from the observation <span class="math notranslate nohighlight">\(i\)</span> to the ungauged location, and <span class="math notranslate nohighlight">\(\sum^k w_i = 1\)</span>.</p>
+<p>Finally, the estimated FDC at the ungauged location, <span class="math notranslate nohighlight">\(\hat{FDC}_{pred}\)</span>, is used to convert the non-exceedance timeseries to streamflow timeseries:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{FDC}_{pred} : \mathbf{p_{pred}} \to \mathbf{q_{pred}}, \, \mathbf{P} = \set{\mathbf{p}_1, ..., \mathbf{p}_k}
+\]</div>
+<p>Looking at this formulation, and the sequence of transformations that take place, I hope it is clear why the method is rightfully called the <em>QPPQ method</em>.</p>
 <p>This method is summarized well by the taken from the <a class="reference external" href="https://pubs.usgs.gov/sir/2015/5157/sir20155157.pdf">USGS Report on the topic</a>:</p>
 <p>==GRAPHIC==</p>
 </section>

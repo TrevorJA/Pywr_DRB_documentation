@@ -6,7 +6,9 @@ A graphical representation of the model is shown below:
 
 <iframe id="serviceFrameSend" src="drb_model_map.html" height = "500" width = "800" title = "Graphical Representation of Pywr-DRB Model"></iframe>
 
-# Contents
+
+
+## Contents
 ```{tableofcontents}
 ```
 
@@ -14,9 +16,3 @@ A graphical representation of the model is shown below:
 ## Acknowledgments
 
 This work is done in partnership with the United States Geologic Survey (USGS) with the goal of supporting their [Integrated Water Availability Assessments](https://www.usgs.gov/mission-areas/water-resources/science/integrated-water-availability-assessments-iwaas). The project is an interagency collaboration effort with contributors from Cornell University, NCAR, PNNL, and LBNL.
-
-
-## Resources
-- [*Water Management and Science in the DRB*](https://labs.waterdata.usgs.gov/visualizations/delaware-basin-story/index.html#/)
-- [*How We **Monitor** Stream Temperature in the DRB*](https://labs.waterdata.usgs.gov/visualizations/temperature-prediction/index.html#/monitoring)
-- [*How We **Model** Stream Temperature in the DRB*](https://labs.waterdata.usgs.gov/visualizations/temperature-prediction/index.html#/modeling)
