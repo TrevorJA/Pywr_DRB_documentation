@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Getting_Started/Interpret_Results/interpret_results.html">Interpret results</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Interpret_Results/model_outputs.html">Model Outputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Interpret_Results/all_figures.html">Figures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Interpret_Results/output_figures.html">Visualize Results</a></li>
 </ul>
 </li>
 </ul>
@@ -390,7 +390,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-data-requirements">Model data requirements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-data">Accessing data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-availability">Data Availability</a></li>
 </ul>
             </nav>
         </div>
@@ -415,29 +415,30 @@ document.write(`
 <li><p>Reconstructed historic record</p></li>
 </ol>
 <blockquote>
-<div><p>A combination of historic streamflow observations from USGS gauge stations and predictions of streamflow at ungauged locations. For more detail on ungauged predictions, see Supplemental: Streamflow Prediction in Ungauged Basins. #TODO: Add link</p>
+<div><p>A combination of historic streamflow observations from USGS gauge stations and predictions of streamflow at ungauged locations. For more detail on ungauged predictions, see <span class="xref myst">Supplemental: Streamflow Prediction in Ungauged Basins.</span></p>
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li><p>National Water Model (NWM)</p></li>
+<li><p>[National Water Model (NWM)](<a class="reference external" href="https://water.noaa.gov/about/nwm#:~:text=The%20National%20Water%20Model%20(NWM,and%20how%20they%20fit%20together.)">https://water.noaa.gov/about/nwm#:~:text=The National Water Model (NWM,and how they fit together.)</a></p></li>
 </ol>
 <blockquote>
-<div><p>The NWM is a hydrologic model.</p>
+<div><p>The NWM is a forecasting system developed by the National Oceanic and Atmospheric Administration (NOAA) that predicts water availability, movement, and flooding across the United States.</p>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li><p>National Hydrologic Model (NHM)</p></li>
+<li><p><a class="reference external" href="https://www.sciencebase.gov/catalog/item/4f4e4773e4b07f02db47e234">National Hydrologic Model (NHM)</a></p></li>
 </ol>
 <blockquote>
-<div><p>The NHM is another hydrologic model.</p>
+<div><p>The NHM is a hydrological model developed by the US Geological Survey (USGS) that simulates water movement and availability across the United States.</p>
 </div></blockquote>
 <ol class="arabic simple" start="4">
-<li><p>Water Evaluation and Planning System (WEAP) Streamflows</p></li>
+<li><p><a class="reference external" href="https://www.weap21.org/">Water Evaluation and Planning System (WEAP)</a> Streamflows</p></li>
 </ol>
 <blockquote>
 <div><p>Streamflows throughout the basin are generated within a <a class="reference external" href="https://www.weap21.org/index.asp">WEAP model</a> model of the basin. These streamflows have been gathered from the model and are available as comparative inputs.</p>
 </div></blockquote>
 </section>
-<section id="accessing-data">
-<h2>Accessing data<a class="headerlink" href="#accessing-data" title="Permalink to this heading">#</a></h2>
+<section id="data-availability">
+<h2>Data Availability<a class="headerlink" href="#data-availability" title="Permalink to this heading">#</a></h2>
+<p>Streamflow data needed to run the Pywr-DRB model is available in the <a class="reference external" href="https://github.com/ahamilton144/DRB_water_management/tree/master/input_data"><code class="docutils literal notranslate"><span class="pre">input_data/</span></code> folder within the project repository.</a></p>
 </section>
 </section>
 
@@ -504,7 +505,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-data-requirements">Model data requirements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-data">Accessing data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-availability">Data Availability</a></li>
 </ul>
   </nav></div>
 

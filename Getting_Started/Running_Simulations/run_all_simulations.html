@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Interpret_Results/interpret_results.html">Interpret results</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Interpret_Results/model_outputs.html">Model Outputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Interpret_Results/all_figures.html">Figures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Interpret_Results/output_figures.html">Visualize Results</a></li>
 </ul>
 </li>
 </ul>
@@ -389,15 +389,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-the-model">Executing the model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-all-simulations">Run all simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-simulation-of-historic-conditions">Run simulation of historic conditions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-figures">Generate figures</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-figures">Output figures</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistic-radial-plot">Summary statistic radial plot</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-figures">Generate figures</a></li>
 </ul>
             </nav>
         </div>
@@ -413,38 +405,30 @@ document.write(`
 <h1>Run all model simulations<a class="headerlink" href="#run-all-model-simulations" title="Permalink to this heading">#</a></h1>
 <section id="executing-the-model">
 <h2>Executing the model<a class="headerlink" href="#executing-the-model" title="Permalink to this heading">#</a></h2>
-<p>The model is run by calling the <code class="docutils literal notranslate"><span class="pre">drb.py</span></code> file from the command line, with the <code class="docutils literal notranslate"><span class="pre">run</span></code> call.  Example:</p>
+<p>The model is run by calling the <code class="docutils literal notranslate"><span class="pre">drb_run_sim.py</span></code> file from the command line, with arguments for <code class="docutils literal notranslate"><span class="pre">inflow_type</span></code> and <code class="docutils literal notranslate"><span class="pre">backup_inflow_type</span></code>. The inflow type options are <code class="docutils literal notranslate"><span class="pre">obs_pub</span></code>, <code class="docutils literal notranslate"><span class="pre">nhmv10</span></code>, <code class="docutils literal notranslate"><span class="pre">nwmv21</span></code>, <code class="docutils literal notranslate"><span class="pre">nwmv21_withLakes</span></code>, and <code class="docutils literal notranslate"><span class="pre">WEAP_23Aug2022_gridmet</span></code>. For descriptions of these different inflow data, see the <span class="xref myst">Data Summary</span> page.</p>
+<p>Example:</p>
 <div class="highlight-BASH notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;model<span class="w"> </span>base<span class="w"> </span>directory&gt;
-python<span class="w"> </span>drb.py<span class="w"> </span>run
+python3<span class="w"> </span>drb_run_sim.py<span class="w"> </span>&lt;inflow_type&gt;<span class="w"> </span>&lt;backup_inflow_type&gt;
 </pre></div>
 </div>
-<blockquote>
-<div><p>[!note] Note:
-You may receive warnings that the <code class="docutils literal notranslate"><span class="pre">drb_output.hdf5</span></code> output file could not be updated while running the model. Ignore this until the model has completed its run.  See additional troubleshooting if the <code class="docutils literal notranslate"><span class="pre">drb_output.hdf5</span></code> is not updated once the model has completed its run.</p>
-</div></blockquote>
-</section>
-<section id="run-all-simulations">
-<h2>Run all simulations<a class="headerlink" href="#run-all-simulations" title="Permalink to this heading">#</a></h2>
-<p>To run the Pywr-DRB model using all available streamflow inputs (Historic Reconstruction, NHM, NWM, and WEAP) run the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>drb_run_all.sh
+<p>```{note} You may receive warnings that the <code class="docutils literal notranslate"><span class="pre">drb_output.hdf5</span></code> output file could not be updated while running the model. Ignore this until the model has completed its run.  See additional troubleshooting if the <code class="docutils literal notranslate"><span class="pre">drb_output.hdf5</span></code> is not updated once the model has completed its run.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+## Run all simulations
+
+To run the Pywr-DRB model using all available streamflow inputs (Historic Reconstruction, NHM, NWM, and WEAP) run the following command:
+```bash
+bash drb_run_all.sh
 </pre></div>
 </div>
-<p>Results will be stored in the <code class="docutils literal notranslate"><span class="pre">output_data/</span></code> folder.</p>
-</section>
-<section id="run-simulation-of-historic-conditions">
-<h2>Run simulation of historic conditions<a class="headerlink" href="#run-simulation-of-historic-conditions" title="Permalink to this heading">#</a></h2>
+<p>Results will be stored in the <code class="docutils literal notranslate"><span class="pre">output_data/drb_output.hdf5</span></code> folder. See <span class="xref myst">Model Outputs</span> for a description of the data contained within the output.</p>
 </section>
 <section id="generate-figures">
 <h2>Generate figures<a class="headerlink" href="#generate-figures" title="Permalink to this heading">#</a></h2>
+<p>Several plotting functions are available to visualize the model results. The <code class="docutils literal notranslate"><span class="pre">drb_make_figs.py</span></code> module produces these figures using the latest model outputs. All figures can be produced if all model simulations have been run, by executing the command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>drb_make_figs.py
 </pre></div>
 </div>
-<section id="output-figures">
-<h3>Output figures<a class="headerlink" href="#output-figures" title="Permalink to this heading">#</a></h3>
-<section id="summary-statistic-radial-plot">
-<h4>Summary statistic radial plot<a class="headerlink" href="#summary-statistic-radial-plot" title="Permalink to this heading">#</a></h4>
-</section>
-</section>
+<p>See <span class="xref myst">Visualizing Results</span> for descriptions of the resulting figures.</p>
 </section>
 </section>
 
@@ -510,15 +494,7 @@ You may receive warnings that the <code class="docutils literal notranslate"><sp
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-the-model">Executing the model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-all-simulations">Run all simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-simulation-of-historic-conditions">Run simulation of historic conditions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-figures">Generate figures</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-figures">Output figures</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistic-radial-plot">Summary statistic radial plot</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-figures">Generate figures</a></li>
 </ul>
   </nav></div>
 
