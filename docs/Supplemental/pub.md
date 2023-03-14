@@ -18,8 +18,9 @@ The methods used and presented here are described in detail in [Worland et al (2
 
 ### Neural Net Prediction of Flow Duration Curves
 
->[!warning] Method summary needed.
->Check back later for a summary of this method.
+```{note}
+Details on neural net to be added later.
+```
 
 ### QPPQ-Method for Streamflow Timeseries Generation
 
@@ -36,15 +37,37 @@ The QPPQ method is commonly used and encouraged by the USGS, and is described at
 To limit the scope of this tutorial, let's assume that an estimate of the FDC at the target site, $\hat{FDC}_{pred}$, has already been determined through some other statistical or observational study.
 
 Then the QPPQ method can be described more formally. Given an ungauged location with an estimated FDC, $\hat{FDC}_{pred}$, and set of observed streamflow timeseries $\mathbf{q_i}$ at $K$ neighboring sites, such that:
-$$Q_{obs} = \set{\mathbf{q_1}, \mathbf{q_2}, ..., \mathbf{q_k}}$$
+
+$$
+Q_{obs} = \set{\mathbf{q_1}, \mathbf{q_2}, ..., \mathbf{q_k}}
+$$
+
 With corresponding $K$ FDCs at the observation locations:
-$$FDC_{obs} = \set{FDC_1, FDC_2, ... , FDC_k}$$
+
+$$
+FDC_{obs} = \set{FDC_1, FDC_2, ... , FDC_k}
+$$
+
 The FDCs are used to convert the observed streamflow timeseries, $\mathbf{q_{obs, i}}$, to non-exceedance probability timeseries, $\mathbf{p_{obs, i}}$.
-$$FDC_i : \mathbf{q_{i}} \to \mathbf{p_i}$$
-We can then perform a weighted-aggregation of the non-exceedance probability timeseries to estimate the non-exceedance timeseries at the ungauged location. It is most common to apply an inverse-squared-distance weight to each observed timeseries such that:$$\mathbf{p_{pred}} = \sum^k (\mathbf{p_i}w_i)$$ Where $w_i = 1 / d_i^2$ where $d_i$ is the distance from the observation $i$ to the ungauged location, and $\sum^k w_i = 1$.
+
+$$
+FDC_i : \mathbf{q_{i}} \to \mathbf{p_i}
+$$
+
+We can then perform a weighted-aggregation of the non-exceedance probability timeseries to estimate the non-exceedance timeseries at the ungauged location. It is most common to apply an inverse-squared-distance weight to each observed timeseries such that:
+
+$$
+\mathbf{p_{pred}} = \sum^k (\mathbf{p_i}w_i)
+$$
+
+Where $w_i = 1 / d_i^2$ where $d_i$ is the distance from the observation $i$ to the ungauged location, and $\sum^k w_i = 1$.
 
 Finally, the estimated FDC at the ungauged location, $\hat{FDC}_{pred}$, is used to convert the non-exceedance timeseries to streamflow timeseries:
-$$\hat{FDC}_{pred} : \mathbf{p_{pred}} \to \mathbf{q_{pred}}, \, \mathbf{P} = \set{\mathbf{p}_1, ..., \mathbf{p}_k}$$
+
+$$
+\hat{FDC}_{pred} : \mathbf{p_{pred}} \to \mathbf{q_{pred}}, \, \mathbf{P} = \set{\mathbf{p}_1, ..., \mathbf{p}_k}
+$$
+
 Looking at this formulation, and the sequence of transformations that take place, I hope it is clear why the method is rightfully called the *QPPQ method*.
 
 This method is summarized well by the taken from the [USGS Report on the topic](https://pubs.usgs.gov/sir/2015/5157/sir20155157.pdf):
