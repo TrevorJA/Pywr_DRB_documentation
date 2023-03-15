@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Summary of data &#8212; Pywr-DRB &lt;br&gt; Integrated Water Resource Management Model</title>
+    <title>Summary of data &#8212; Pywr-DRB Integrated Water Resource Management Model</title>
   
   
   
@@ -389,7 +389,13 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-data-requirements">Model data requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconstructed-historic-record">Reconstructed historic record</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#national-water-model-nwm">National Water Model (NWM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#national-hydrologic-model-nhm">National Hydrologic Model (NHM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#water-evaluation-and-planning-system-weap-streamflows">Water Evaluation and Planning System (WEAP) Streamflows</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-availability">Data Availability</a></li>
 </ul>
             </nav>
@@ -410,31 +416,22 @@ document.write(`
 </section>
 <section id="data-sources">
 <h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this heading">#</a></h2>
-<p>Four alternative streamflow records are available for simulation, including:</p>
-<ol class="arabic simple">
-<li><p>Reconstructed historic record</p></li>
-</ol>
-<blockquote>
-<div><p>A combination of historic streamflow observations from USGS gauge stations and predictions of streamflow at ungauged locations. For more detail on ungauged predictions, see <span class="xref myst">Supplemental: Streamflow Prediction in Ungauged Basins.</span></p>
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li><p><a class="reference external" href="https://water.noaa.gov/about/nwm">National Water Model (NWM)</a></p></li>
-</ol>
-<blockquote>
-<div><p>The NWM is a forecasting system developed by the National Oceanic and Atmospheric Administration (NOAA) that predicts water availability, movement, and flooding across the United States.</p>
-</div></blockquote>
-<ol class="arabic simple" start="3">
-<li><p><a class="reference external" href="https://www.sciencebase.gov/catalog/item/4f4e4773e4b07f02db47e234">National Hydrologic Model (NHM)</a></p></li>
-</ol>
-<blockquote>
-<div><p>The NHM is a hydrological model developed by the US Geological Survey (USGS) that simulates water movement and availability across the United States.</p>
-</div></blockquote>
-<ol class="arabic simple" start="4">
-<li><p><a class="reference external" href="https://www.weap21.org/">Water Evaluation and Planning System (WEAP)</a> Streamflows</p></li>
-</ol>
-<blockquote>
-<div><p>Streamflows throughout the basin are generated within a <a class="reference external" href="https://www.weap21.org/index.asp">WEAP model</a> model of the basin. These streamflows have been gathered from the model and are available as comparative inputs.</p>
-</div></blockquote>
+<section id="reconstructed-historic-record">
+<h3>Reconstructed historic record<a class="headerlink" href="#reconstructed-historic-record" title="Permalink to this heading">#</a></h3>
+<p>A combination of historic streamflow observations from USGS gauge stations and predictions of streamflow at ungauged locations. For more detail on ungauged predictions, see <a class="reference internal" href="pub.html"><span class="doc std std-doc">Supplemental: Streamflow Prediction in Ungauged Basins.</span></a></p>
+</section>
+<section id="national-water-model-nwm">
+<h3><a class="reference external" href="https://water.noaa.gov/about/nwm">National Water Model (NWM)</a><a class="headerlink" href="#national-water-model-nwm" title="Permalink to this heading">#</a></h3>
+<p>The NWM is a forecasting system developed by the National Oceanic and Atmospheric Administration (NOAA) that predicts water availability, movement, and flooding across the United States.</p>
+</section>
+<section id="national-hydrologic-model-nhm">
+<h3><a class="reference external" href="https://www.sciencebase.gov/catalog/item/4f4e4773e4b07f02db47e234">National Hydrologic Model (NHM)</a><a class="headerlink" href="#national-hydrologic-model-nhm" title="Permalink to this heading">#</a></h3>
+<p>The NHM is a hydrological model developed by the US Geological Survey (USGS) that simulates water movement and availability across the United States.</p>
+</section>
+<section id="water-evaluation-and-planning-system-weap-streamflows">
+<h3><a class="reference external" href="https://www.weap21.org/">Water Evaluation and Planning System (WEAP)</a> Streamflows<a class="headerlink" href="#water-evaluation-and-planning-system-weap-streamflows" title="Permalink to this heading">#</a></h3>
+<p>Streamflows throughout the basin are generated within a <a class="reference external" href="https://www.weap21.org/index.asp">WEAP model</a> model of the basin. These streamflows have been gathered from the model and are available as comparative inputs.</p>
+</section>
 </section>
 <section id="data-availability">
 <h2>Data Availability<a class="headerlink" href="#data-availability" title="Permalink to this heading">#</a></h2>
@@ -504,7 +501,13 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-data-requirements">Model data requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reconstructed-historic-record">Reconstructed historic record</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#national-water-model-nwm">National Water Model (NWM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#national-hydrologic-model-nhm">National Hydrologic Model (NHM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#water-evaluation-and-planning-system-weap-streamflows">Water Evaluation and Planning System (WEAP) Streamflows</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-availability">Data Availability</a></li>
 </ul>
   </nav></div>

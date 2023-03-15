@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Setup Model &#8212; Pywr-DRB &lt;br&gt; Integrated Water Resource Management Model</title>
+    <title>Setup Model &#8212; Pywr-DRB Integrated Water Resource Management Model</title>
   
   
   
@@ -390,6 +390,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-pywr-drb">Accessing Pywr-DRB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quck">Quck</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executables">Executables</a></li>
 </ul>
             </nav>
@@ -411,6 +412,65 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">DRB_water_managment</span>
 </pre></div>
 </div>
+<p>The folder contains the following content, see the <a class="reference internal" href="../API_References/api_references.html"><span class="doc std std-doc">References</span></a> for detail on component modules and functions:</p>
+<p>No code block:</p>
+<p>DRB_water_management/
+├── DRB_spatial/
+├── input_data/
+│   ├── modeled_gages/
+│   ├── usgs_gages/
+│   └── WEAP_gridmet/
+├── model_data/
+├── output_data/
+├── figs/
+├── prep_input_data.py
+├── custom_pywr.py
+├── drb_make_figs.py
+├── drb_make_model.py
+├── drb_run_sim.py
+├── drb_run_all.sh<br />
+├── <a class="reference external" href="http://README.md">README.md</a>
+└── requirements.txt</p>
+<p>Bash:</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>DRB_water_management/
+├──<span class="w"> </span>DRB_spatial/
+├──<span class="w"> </span>input_data/
+│<span class="w">   </span>├──<span class="w"> </span>modeled_gages/
+│<span class="w">   </span>├──<span class="w"> </span>usgs_gages/
+│<span class="w">   </span>└──<span class="w"> </span>WEAP_gridmet/
+├──<span class="w"> </span>model_data/
+├──<span class="w"> </span>output_data/
+├──<span class="w"> </span>figs/
+├──<span class="w"> </span>prep_input_data.py
+├──<span class="w"> </span>custom_pywr.py
+├──<span class="w"> </span>drb_make_figs.py
+├──<span class="w"> </span>drb_make_model.py
+├──<span class="w"> </span>drb_run_sim.py
+├──<span class="w"> </span>drb_run_all.sh<span class="w">        </span>
+├──<span class="w"> </span>README.md
+└──<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p>ASCII</p>
+<div class="highlight-ASCII notranslate"><div class="highlight"><pre><span></span>DRB_water_management/
+├── DRB_spatial/
+├── input_data/
+│   ├── modeled_gages/
+│   ├── usgs_gages/
+│   └── WEAP_gridmet/
+├── model_data/
+├── output_data/
+├── figs/
+├── prep_input_data.py
+├── custom_pywr.py
+├── drb_make_figs.py
+├── drb_make_model.py
+├── drb_run_sim.py
+├── drb_run_all.sh        
+├── README.md
+└── requirements.txt
+</pre></div>
+</div>
 </section>
 <section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading">#</a></h2>
@@ -421,10 +481,16 @@ document.write(`
 <li><p>h5py</p></li>
 <li><p>hydroeval</p></li>
 </ul>
-<p>You can install all of the necessary dependencies by running:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">py</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="o">&lt;</span><span class="n">your_local_directory</span><span class="o">&gt;</span>\<span class="n">DRB_water_management</span>\<span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<p>You can install all of the necessary dependencies in a virtual environment:</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;your_local_directory&gt;<span class="se">\D</span>RB_water_management
+python3<span class="w"> </span>-m<span class="w"> </span>virtualenv<span class="w"> </span>venv
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </pre></div>
 </div>
+</section>
+<section id="quck">
+<h2>Quck<a class="headerlink" href="#quck" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="executables">
 <h2>Executables<a class="headerlink" href="#executables" title="Permalink to this heading">#</a></h2>
@@ -510,6 +576,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-pywr-drb">Accessing Pywr-DRB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quck">Quck</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executables">Executables</a></li>
 </ul>
   </nav></div>

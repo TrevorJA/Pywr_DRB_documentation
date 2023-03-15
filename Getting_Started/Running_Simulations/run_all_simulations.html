@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Run all model simulations &#8212; Pywr-DRB &lt;br&gt; Integrated Water Resource Management Model</title>
+    <title>Run all model simulations &#8212; Pywr-DRB Integrated Water Resource Management Model</title>
   
   
   
@@ -406,7 +406,8 @@ document.write(`
 <h1>Run all model simulations<a class="headerlink" href="#run-all-model-simulations" title="Permalink to this heading">#</a></h1>
 <section id="executing-the-model">
 <h2>Executing the model<a class="headerlink" href="#executing-the-model" title="Permalink to this heading">#</a></h2>
-<p>The model is run by calling the <code class="docutils literal notranslate"><span class="pre">drb_run_sim.py</span></code> file from the command line, with arguments for <code class="docutils literal notranslate"><span class="pre">inflow_type</span></code> and <code class="docutils literal notranslate"><span class="pre">backup_inflow_type</span></code>. The inflow type options are <code class="docutils literal notranslate"><span class="pre">obs_pub</span></code>, <code class="docutils literal notranslate"><span class="pre">nhmv10</span></code>, <code class="docutils literal notranslate"><span class="pre">nwmv21</span></code>, <code class="docutils literal notranslate"><span class="pre">nwmv21_withLakes</span></code>, and <code class="docutils literal notranslate"><span class="pre">WEAP_23Aug2022_gridmet</span></code>. For descriptions of these different inflow data, see the <span class="xref myst">Data Summary</span> page.</p>
+<p>The model is run by calling the <code class="docutils literal notranslate"><span class="pre">drb_run_sim.py</span></code> file from the command line, with arguments for <code class="docutils literal notranslate"><span class="pre">inflow_type</span></code> and <code class="docutils literal notranslate"><span class="pre">backup_inflow_type</span></code>.</p>
+<p>The inflow type options are <code class="docutils literal notranslate"><span class="pre">obs_pub</span></code>, <code class="docutils literal notranslate"><span class="pre">nhmv10</span></code>, <code class="docutils literal notranslate"><span class="pre">nwmv21</span></code>, <code class="docutils literal notranslate"><span class="pre">nwmv21_withLakes</span></code>, and <code class="docutils literal notranslate"><span class="pre">WEAP_23Aug2022_gridmet</span></code>. For descriptions of these different inflow data, see the <span class="xref myst">Data Summary</span> page.</p>
 <p>Example:</p>
 <div class="highlight-BASH notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;model<span class="w"> </span>base<span class="w"> </span>directory&gt;
 python3<span class="w"> </span>drb_run_sim.py<span class="w"> </span>&lt;inflow_type&gt;<span class="w"> </span>&lt;backup_inflow_type&gt;
@@ -414,16 +415,17 @@ python3<span class="w"> </span>drb_run_sim.py<span class="w"> </span>&lt;inflow_
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You may receive warnings that the <code class="docutils literal notranslate"><span class="pre">drb_output.hdf5</span></code> output file could not be updated while running the model. Ignore this until the model has completed its run.  See additional troubleshooting if the <code class="docutils literal notranslate"><span class="pre">drb_output.hdf5</span></code> is not updated once the model has completed its run.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">backup_inflow_type</span></code> data is only necessary when running <code class="docutils literal notranslate"><span class="pre">WEAP_gridmet</span></code> as the main <code class="docutils literal notranslate"><span class="pre">inflow_type</span></code>.</p>
 </div>
 </section>
 <section id="run-all-simulations">
 <h2>Run all simulations<a class="headerlink" href="#run-all-simulations" title="Permalink to this heading">#</a></h2>
-<p>To run the Pywr-DRB model using all available streamflow inputs (Historic Reconstruction, NHM, NWM, and WEAP) run the following command:</p>
-<div class="highlight-BASH notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>drb_run_all.sh
+<p>To run the Pywr-DRB model using all available streamflow inputs (historic reconstruction, NHM, NWM, and WEAP) run the following command:</p>
+<div class="highlight-BASH notranslate"><div class="highlight"><pre><span></span>sh<span class="w"> </span>drb_run_all.sh
 </pre></div>
 </div>
-<p>Results will be stored in the <code class="docutils literal notranslate"><span class="pre">output_data/drb_output.hdf5</span></code> folder. See <a class="reference internal" href="../Interpret_Results/model_outputs.html"><span class="doc std std-doc">Model Outputs</span></a> for a description of the data contained within the output.</p>
+<p>Results will be stored in the <code class="docutils literal notranslate"><span class="pre">output_data/drb_output_&lt;inflow_type&gt;.hdf5</span></code> folder, where <code class="docutils literal notranslate"><span class="pre">&lt;inflow_type&gt;</span></code> is the user-specified argument, as discussed above.</p>
+<p>See <a class="reference internal" href="../Interpret_Results/model_outputs.html"><span class="doc std std-doc">Model Outputs</span></a> for a description of the data contained within the output.</p>
 </section>
 <section id="generate-figures">
 <h2>Generate figures<a class="headerlink" href="#generate-figures" title="Permalink to this heading">#</a></h2>
