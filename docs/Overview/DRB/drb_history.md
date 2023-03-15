@@ -10,7 +10,7 @@ Throughout the 20th century, the Delaware River Basin became increasingly indust
 
 ```{figure} ../../images/drb_water_supply_graphic.png
 :name: drb-population
-:height: 400
+:height: 550
 
 Population served by DRB water based on population estimates for 2016.
 ```

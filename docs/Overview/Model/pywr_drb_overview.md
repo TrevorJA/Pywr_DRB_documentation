@@ -37,6 +37,3 @@ The Pywr-DRB model includes representation of the following:
 - Regulation governing reservoir operations
 
 ## References
-```{bibliography}
-:filter: docname in docnames
-```

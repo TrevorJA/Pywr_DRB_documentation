@@ -77,6 +77,3 @@ This method is presented in greater detail in the publication, {cite:p}`nowak201
 
 ***
 ## References
-```{bibliography}
-:filter: docname in docnames
-```

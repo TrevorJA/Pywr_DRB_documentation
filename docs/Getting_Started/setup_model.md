@@ -12,29 +12,6 @@ git clone https://github.com/DRB_water_managment
 
 The folder contains the following content, see the [References](../../API_References/api_references.md) for detail on component modules and functions:
 
-No code block:
-
-
-DRB_water_management/
-├── DRB_spatial/
-├── input_data/
-│   ├── modeled_gages/
-│   ├── usgs_gages/
-│   └── WEAP_gridmet/
-├── model_data/
-├── output_data/
-├── figs/
-├── prep_input_data.py
-├── custom_pywr.py
-├── drb_make_figs.py
-├── drb_make_model.py
-├── drb_run_sim.py
-├── drb_run_all.sh        
-├── README.md
-└── requirements.txt
-
-Bash:
-
 ```Bash
 DRB_water_management/
 ├── DRB_spatial/
@@ -55,27 +32,6 @@ DRB_water_management/
 └── requirements.txt
 ```
 
-ASCII
-
-```ASCII
-DRB_water_management/
-├── DRB_spatial/
-├── input_data/
-│   ├── modeled_gages/
-│   ├── usgs_gages/
-│   └── WEAP_gridmet/
-├── model_data/
-├── output_data/
-├── figs/
-├── prep_input_data.py
-├── custom_pywr.py
-├── drb_make_figs.py
-├── drb_make_model.py
-├── drb_run_sim.py
-├── drb_run_all.sh        
-├── README.md
-└── requirements.txt
-```
 
 ## Dependencies
 

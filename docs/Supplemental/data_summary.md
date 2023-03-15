@@ -18,7 +18,7 @@ The Pywr-DRB model is designed to receive streamflow timeseries at 18 upstream c
 * - National Water Model (NWM)
   - `nwmv21`, `nwmv21_withLakes`
   - The NWM is a forecasting system developed by the National Oceanic and Atmospheric Administration (NOAA) that predicts water availability, movement, and flooding across the United States.
-* National Hydrological Model (NHM)
+* - National Hydrological Model (NHM)
   - `nhmv10`
   - The NHM is a hydrological model developed by the US Geological Survey (USGS) that simulates water movement and availability across the United States.
 * - Water Evaluation and Planning (WEAP) Model
