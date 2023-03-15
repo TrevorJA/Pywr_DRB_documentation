@@ -10,7 +10,7 @@ Four alternative streamflow records are available for simulation, including:
 1. Reconstructed historic record
 > A combination of historic streamflow observations from USGS gauge stations and predictions of streamflow at ungauged locations. For more detail on ungauged predictions, see [Supplemental: Streamflow Prediction in Ungauged Basins.](./pub.html)
 
-2. [National Water Model (NWM)](https://water.noaa.gov/about/nwm#:~:text=The%20National%20Water%20Model%20(NWM,and%20how%20they%20fit%20together.)
+2. [National Water Model (NWM)](https://water.noaa.gov/about/nwm)
 >The NWM is a forecasting system developed by the National Oceanic and Atmospheric Administration (NOAA) that predicts water availability, movement, and flooding across the United States.
 
 3. [National Hydrologic Model (NHM)](https://www.sciencebase.gov/catalog/item/4f4e4773e4b07f02db47e234)
