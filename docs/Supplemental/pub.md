@@ -72,7 +72,13 @@ Looking at this formulation, and the sequence of transformations that take place
 
 This method is summarized well by the taken from the [USGS Report on the topic](https://pubs.usgs.gov/sir/2015/5157/sir20155157.pdf):
 
-==GRAPHIC==
+```{figure} ../images/QPPQ_method.jpg
+:name: QPPQ-method
+
+Graphical representation of the QPPQ methodology, showing A, observed daily mean streamflow
+at a reference streamgage, B, flow-duration curve at the reference streamgage, C, constructed flow-duration curve at the ungaged stream location, and D, estimated daily mean streamflow at the ungaged
+stream location. (Modified from Archfield and others, 2010; Stuckey and others, 2014.)
+```
 
 
 ## References
