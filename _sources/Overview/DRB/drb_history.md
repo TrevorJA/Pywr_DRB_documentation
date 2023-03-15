@@ -8,7 +8,7 @@ The Delaware River Basin has been inhabited by indigenous peoples for thousands 
 ## Water Management and Planning
 Throughout the 20th century, the Delaware River Basin became increasingly industrialized, urbanized, and populated, leading to growing demands for water resources. In response, various management and planning actions were taken, including the formation of the Delaware River Basin Commission in 1961. This interstate compact agency is responsible for managing the basin's water resources, including water quality, quantity, and allocation.
 
-```{figure} ../../images/drb_water_supply_graphic.JPG
+```{figure} ../../images/drb_water_supply_graphic.png
 :name: drb-population
 :height: 400
 
