@@ -8,6 +8,18 @@ The Delaware River Basin has been inhabited by indigenous peoples for thousands 
 ## Water Management and Planning
 Throughout the 20th century, the Delaware River Basin became increasingly industrialized, urbanized, and populated, leading to growing demands for water resources. In response, various management and planning actions were taken, including the formation of the Delaware River Basin Commission in 1961. This interstate compact agency is responsible for managing the basin's water resources, including water quality, quantity, and allocation.
 
+```{figure} ../../images/drb_water_supply_graphic.jpg
+:name: drb-population
+
+Population served by DRB water based on population estimates for 2016.
+```
+
+Now using basic format:
+
+![DRB Population Graphic](../../images/drb_water_supply_graphic.jpg)
+
+Figure source: [DRBC Water Resources Program FY 2023-2025 Report](https://www.nj.gov/drbc/library/documents/WRPFY23-25.pdf)
+
 ## Regulation and Key Events
 Several key events in history have shaped water management and regulation in the Delaware River Basin. In 1965, the Federal Water Pollution Control Act was passed, which established regulations to control water pollution in the basin and throughout the country. The passage of the Clean Water Act in 1972 further strengthened these regulations, leading to significant improvements in water quality in the basin.
 
