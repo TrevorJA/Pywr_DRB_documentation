@@ -26,7 +26,15 @@ Details on neural net to be added later.
 
 [Fennessey (1994)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=efFhgZ8AAAAJ&citation_for_view=efFhgZ8AAAAJ:zYLM7Y9cAGgC) introduced the *QPPQ method* for streamflow estimation at ungauged locations.
 
-The QPPQ method is commonly used and encouraged by the USGS, and is described at length in their publication [*Estimation of Daily Mean Streamflow for Ungaged Stream locations...* (2016)](https://pubs.usgs.gov/sir/2015/5157/sir20155157.pdf).
+The QPPQ method is commonly used and encouraged by the USGS, and is described at length in their publication [*Estimation of Daily Mean Streamflow for Ungaged Stream locations...* (2016)](https://pubs.usgs.gov/sir/2015/5157/sir20155157.pdf), and is summarized well in a figure taken from the same publication:
+
+```{figure} ../images/QPPQ_method.png
+:name: QPPQ-method
+
+Graphical representation of the QPPQ methodology, showing A, observed daily mean streamflow
+at a reference streamgage, B, flow-duration curve at the reference streamgage, C, constructed flow-duration curve at the ungaged stream location, and D, estimated daily mean streamflow at the ungaged
+stream location. (Modified from Archfield and others, 2010; Stuckey and others, 2014.)
+```
 
 **QPPQ consists of four key steps:**
 1. Estimating an FDC for the target catchment of interest, $\hat{FDC}_{pred}$.
@@ -70,15 +78,6 @@ $$
 
 Looking at this formulation, and the sequence of transformations that take place, I hope it is clear why the method is rightfully called the *QPPQ method*.
 
-This method is summarized well by the taken from the [USGS Report on the topic](https://pubs.usgs.gov/sir/2015/5157/sir20155157.pdf):
-
-```{figure} ../images/QPPQ_method.jpg
-:name: QPPQ-method
-
-Graphical representation of the QPPQ methodology, showing A, observed daily mean streamflow
-at a reference streamgage, B, flow-duration curve at the reference streamgage, C, constructed flow-duration curve at the ungaged stream location, and D, estimated daily mean streamflow at the ungaged
-stream location. (Modified from Archfield and others, 2010; Stuckey and others, 2014.)
-```
 
 
 ## References

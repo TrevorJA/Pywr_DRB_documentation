@@ -44,7 +44,7 @@ Reservoir operations in the Delaware River Basin vary depending on their primary
 ### Distribution of Reservoirs
 Reservoirs in the Delaware River Basin are distributed throughout the basin, with the largest concentration located in the upper basin. This reflects the fact that the upper basin is the primary source of water for the entire basin. Reservoirs in the upper basin are managed to store water during wet periods and release it gradually during dry periods, helping to ensure a reliable water supply for downstream users.
 
-```{figure} ../../images/drb_watercolor_viz.jpg
+```{figure} ../../images/drb_watercolor_viz.png
 :name: drb-watercolor
 
 Management Initiatives in the DRB.

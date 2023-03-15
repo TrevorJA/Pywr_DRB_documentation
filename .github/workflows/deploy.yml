@@ -73,12 +73,12 @@ jobs:
         target: "docs/_build/html/drb_model_map.html"
 
     # Copy images to build
-    - name: copy images
-      uses: canastro/copy-file-action@master
-      with:
-        source: docs/images/.
-        target: docs/_build/html/images/
-        flags: '-r'
+    #- name: copy images
+    #  uses: canastro/copy-file-action@master
+    #  with:
+    #    source: docs/images/.
+    #    target: docs/_build/html/images/
+    #    flags: '-r'
 
     # Deploy html to gh-pages
     - name: GitHub Pages action
