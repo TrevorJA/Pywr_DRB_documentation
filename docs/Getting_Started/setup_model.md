@@ -10,6 +10,73 @@ To clone a copy of the repository to your local machine, run the following comma
 git clone https://github.com/DRB_water_managment
 ```
 
+The folder contains the following content, see the [References](../../API_References/api_references.md) for detail on component modules and functions:
+
+No code block:
+
+
+DRB_water_management/
+├── DRB_spatial/
+├── input_data/
+│   ├── modeled_gages/
+│   ├── usgs_gages/
+│   └── WEAP_gridmet/
+├── model_data/
+├── output_data/
+├── figs/
+├── prep_input_data.py
+├── custom_pywr.py
+├── drb_make_figs.py
+├── drb_make_model.py
+├── drb_run_sim.py
+├── drb_run_all.sh        
+├── README.md
+└── requirements.txt
+
+Bash:
+
+```Bash
+DRB_water_management/
+├── DRB_spatial/
+├── input_data/
+│   ├── modeled_gages/
+│   ├── usgs_gages/
+│   └── WEAP_gridmet/
+├── model_data/
+├── output_data/
+├── figs/
+├── prep_input_data.py
+├── custom_pywr.py
+├── drb_make_figs.py
+├── drb_make_model.py
+├── drb_run_sim.py
+├── drb_run_all.sh        
+├── README.md
+└── requirements.txt
+```
+
+ASCII
+
+```ASCII
+DRB_water_management/
+├── DRB_spatial/
+├── input_data/
+│   ├── modeled_gages/
+│   ├── usgs_gages/
+│   └── WEAP_gridmet/
+├── model_data/
+├── output_data/
+├── figs/
+├── prep_input_data.py
+├── custom_pywr.py
+├── drb_make_figs.py
+├── drb_make_model.py
+├── drb_run_sim.py
+├── drb_run_all.sh        
+├── README.md
+└── requirements.txt
+```
+
 ## Dependencies
 
 This project requires several dependencies, listed in [`requirements.txt`](https://github.com/DRB_water_managment/requirements.txt), including:
@@ -18,11 +85,17 @@ This project requires several dependencies, listed in [`requirements.txt`](https
 - h5py
 - hydroeval
 
-You can install all of the necessary dependencies by running:
+You can install all of the necessary dependencies in a virtual environment:
 
+```Bash
+cd <your_local_directory>\DRB_water_management
+python3 -m virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
-py -m pip install -r <your_local_directory>\DRB_water_management\requirements.txt
-```
+
+## Quck
+
 
 ## Executables
 

@@ -20,9 +20,9 @@ The Kirsch-Nowak synthetic streamflow generation method has been shown to produc
 
 The Kirsch-Nowak synthetic generation method consists of two components.
 
-First, a bootstrapping technique combined with a Cholesky decomposition of the autocorrelation matrix are used to generate an ensemble of flows which preserves historic cross-site correlation and inter-site temporal correlation. (This is the *Kirsch* part of the Kirsch-Nowak generator.)
+First, a bootstrapping technique combined with a Cholesky decomposition of the autocorrelation matrix are used to generate an ensemble of flows which preserves historic cross-site correlation and inter-site temporal correlation, as presented in {cite:p}`kirsch2013evaluating`. (This is the *Kirsch* part of the Kirsch-Nowak generator.)
 
-The monthly flows are then disaggregated, converted from monthly flows to daily flow values using the method presented in [Nowak et al. (2010)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2009WR008530).
+The monthly flows are then disaggregated, converted from monthly flows to daily flow values using the method presented in {cite:p}`nowak2010nonparametric`.
 
 ### Kirsch monthly streamflow generator
 
@@ -73,10 +73,10 @@ The final synthetic timeseries is then a combination of $Z[27:52]$ and $Z^'[1:26
 
 ## Nowak disaggregation to daily flows
 
-This method is presented in greater detail in the publication, [Nowak et al. (2010)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2009WR008530).
+This method is presented in greater detail in the publication, {cite:p}`nowak2010nonparametric`.
 
-
-****
-## Resources
-(1) [Kirsch et al. (2013)](https://ascelibrary.org/doi/abs/10.1061/(ASCE)WR.1943-5452.0000287)
-(2) [Nowak et al. (2010)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2009WR008530)
+***
+## References
+```{bibliography}
+:filter: docname in docnames
+```
