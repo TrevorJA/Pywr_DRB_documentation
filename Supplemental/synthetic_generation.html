@@ -436,8 +436,8 @@ document.write(`
 <h2>Kirsch-Nowak Synthetic Generator<a class="headerlink" href="#kirsch-nowak-synthetic-generator" title="Permalink to this heading">#</a></h2>
 <p>The Kirsch-Nowak synthetic streamflow generation method has been shown to produce streamflow timeseries that maintain the historic streamflow statistics while capturing the large degree of internal variability inherent in the system.</p>
 <p>The Kirsch-Nowak synthetic generation method consists of two components.</p>
-<p>First, a bootstrapping technique combined with a Cholesky decomposition of the autocorrelation matrix are used to generate an ensemble of flows which preserves historic cross-site correlation and inter-site temporal correlation, as presented in <span id="id1">[<a class="reference internal" href="#id7" title="Brian R Kirsch, Gregory W Characklis, and Harrison B Zeff. Evaluating the impact of alternative hydro-climate scenarios on transfer agreements: practical improvement for generating synthetic streamflows. Journal of Water Resources Planning and Management, 139(4):396–406, 2013.">KCZ13</a>]</span>. (This is the <em>Kirsch</em> part of the Kirsch-Nowak generator.)</p>
-<p>The monthly flows are then disaggregated, converted from monthly flows to daily flow values using the method presented in <span id="id2">[<a class="reference internal" href="#id6" title="Kenneth Nowak, James Prairie, Balaji Rajagopalan, and Upmanu Lall. A nonparametric stochastic approach for multisite disaggregation of annual to daily streamflow. Water Resources Research, 2010.">NPRL10</a>]</span>.</p>
+<p>First, a bootstrapping technique combined with a Cholesky decomposition of the autocorrelation matrix are used to generate an ensemble of flows which preserves historic cross-site correlation and inter-site temporal correlation, as presented in <span id="id1">[]</span>. (This is the <em>Kirsch</em> part of the Kirsch-Nowak generator.)</p>
+<p>The monthly flows are then disaggregated, converted from monthly flows to daily flow values using the method presented in <span id="id2">[]</span>.</p>
 <section id="kirsch-monthly-streamflow-generator">
 <h3>Kirsch monthly streamflow generator<a class="headerlink" href="#kirsch-monthly-streamflow-generator" title="Permalink to this heading">#</a></h3>
 <p>Also known as the <em>modified Fractional Gaussian Noise</em> generator. This method bootstrap technique to sample from the historic record in a way that maintains cross-site correlations.  Additionally, a Cholesky decomposition of the historic autocorrelation matrix to impose inter-site temporal correlation.</p>
@@ -474,23 +474,11 @@ Q_{S_{i,j}} = \text{exp}(\hat{\mu}_j + Z_{S_{i,j}}\hat{\sigma}_j)
 </section>
 <section id="nowak-disaggregation-to-daily-flows">
 <h2>Nowak disaggregation to daily flows<a class="headerlink" href="#nowak-disaggregation-to-daily-flows" title="Permalink to this heading">#</a></h2>
-<p>This method is presented in greater detail in the publication, <span id="id3">[<a class="reference internal" href="#id6" title="Kenneth Nowak, James Prairie, Balaji Rajagopalan, and Upmanu Lall. A nonparametric stochastic approach for multisite disaggregation of annual to daily streamflow. Water Resources Research, 2010.">NPRL10</a>]</span>.</p>
+<p>This method is presented in greater detail in the publication, <span id="id3">[]</span>.</p>
 </section>
 <hr class="docutils" />
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id4">
-<div class="citation" id="id7" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">KCZ13</a><span class="fn-bracket">]</span></span>
-<p>Brian R Kirsch, Gregory W Characklis, and Harrison B Zeff. Evaluating the impact of alternative hydro-climate scenarios on transfer agreements: practical improvement for generating synthetic streamflows. <em>Journal of Water Resources Planning and Management</em>, 139(4):396–406, 2013.</p>
-</div>
-<div class="citation" id="id6" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>NPRL10<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
-<p>Kenneth Nowak, James Prairie, Balaji Rajagopalan, and Upmanu Lall. A nonparametric stochastic approach for multisite disaggregation of annual to daily streamflow. <em>Water Resources Research</em>, 2010.</p>
-</div>
-</div>
-</div>
 </section>
 </section>
 
