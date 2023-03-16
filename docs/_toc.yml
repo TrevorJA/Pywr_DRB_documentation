@@ -22,7 +22,7 @@ parts:
           file: Overview/Model/pywr_drb_model.md
           sections:
             - title: Model Overview
-              file: Overview/pywr_drb_overview.
+              file: Overview/pywr_drb_overview.md
     # =============== Getting Started =================
     - file: Getting_Started/getting_started.md
       sections:
