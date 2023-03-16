@@ -19,7 +19,10 @@ parts:
             - title: Planning & Management
               file: Overview/DRB/drb_planning_management.md
         - title: Pywr-DRB Model
-          file: Overview/Model/pywr_drb_overview.md
+          file: Overview/Model/pywr_drb_model.md
+          sections:
+            - title: Model Overview
+              file: Overview/pywr_drb_overview.
     # =============== Getting Started =================
     - file: Getting_Started/getting_started.md
       sections:
