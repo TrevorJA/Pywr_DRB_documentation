@@ -67,13 +67,13 @@ $$
 Q_{S_{i,j}} = \text{exp}(\hat{\mu}_j + Z_{S_{i,j}}\hat{\sigma}_j)
 $$
 
-Then, inter-year correlations are preserved by repeating this process starting in week 27 and ending in week 26 of the following year, and constructing $Q_H^'$, $U^'$, $C^'$, and $Z^'$.
+Then, inter-year correlations are preserved by repeating this process starting in week 27 and ending in week 26 of the following year, and constructing $Q_H^{'}$, $U^{'}$, $C^'$, and $Z^{'}$.
 
-The final synthetic timeseries is then a combination of $Z[27:52]$ and $Z^'[1:26]$.
+The final synthetic timeseries is then a combination of $Z[27:52]$ and $Z^{'}[1:26]$.
 
 ## Nowak disaggregation to daily flows
 
-This method is presented in greater detail in the publication, {cite:p}`nowak2010nonparametric`.
+This method is presented in greater detail in the publication.
 
 ***
 ## References
