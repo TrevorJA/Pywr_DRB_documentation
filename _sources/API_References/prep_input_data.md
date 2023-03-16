@@ -2,12 +2,13 @@
 
 This script is used to prepare all of the necessary inflow datasets used in Pywr-DRB. For more information on different inflow datasets, see the [Data Summary page.](../Supplemental/data_summary.md)
 
-## Functions:
+**Functions:**
 - `read_modeled_estimates()`
-> This function loads available data.
+This function loads available data.
 
 - `match_gages()`
-> This function processes streamflow data to account for spatial relationships among nodes.
+This function processes streamflow data to account for spatial relationships among nodes.
+
 
 ***
 
@@ -34,6 +35,7 @@ read_modeled_estimates(filename: str, sep: str, date_label: str, site_label: str
 
 **Returns:**
 - `df_gages` (pd.DataFrame): The resulting dataframe after reading and processing the modeled estimates.
+
 
 
 ***

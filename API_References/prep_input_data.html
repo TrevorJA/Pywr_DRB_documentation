@@ -391,15 +391,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-modeled-estimates"><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-modeled-estimates"><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#match-gages"><code class="docutils literal notranslate"><span class="pre">match_gages()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#match-gages"><code class="docutils literal notranslate"><span class="pre">match_gages()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
 </ul>
 </li>
 </ul>
@@ -416,28 +413,21 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="prep-input-data-py">
 <h1><code class="docutils literal notranslate"><span class="pre">prep_input_data.py</span></code><a class="headerlink" href="#prep-input-data-py" title="Permalink to this heading">#</a></h1>
 <p>This script is used to prepare all of the necessary inflow datasets used in Pywr-DRB. For more information on different inflow datasets, see the <a class="reference internal" href="../Supplemental/data_summary.html"><span class="doc std std-doc">Data Summary page.</span></a></p>
-<section id="functions">
-<h2>Functions:<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<p><strong>Functions:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates()</span></code>
+This function loads available data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match_gages()</span></code>
+This function processes streamflow data to account for spatial relationships among nodes.</p></li>
 </ul>
-<blockquote>
-<div><p>This function loads available data.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">match_gages()</span></code></p></li>
-</ul>
-<blockquote>
-<div><p>This function processes streamflow data to account for spatial relationships among nodes.</p>
-</div></blockquote>
 <hr class="docutils" />
 <section id="read-modeled-estimates">
-<h3><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates()</span></code><a class="headerlink" href="#read-modeled-estimates" title="Permalink to this heading">#</a></h3>
+<h2><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates()</span></code><a class="headerlink" href="#read-modeled-estimates" title="Permalink to this heading">#</a></h2>
 <p>This function reads input streamflows from modeled NHM/NWM estimates, preps them for Pywr, and returns the resulting dataframe.</p>
 <p>The function first reads in the data from the specified file and filters it based on the start and end dates. It then restructures the data to have gages as columns, and converts the streamflow values from cubic meters per second (cms) to million gallons per day (mgd).
 The function returns a dataframe with the restructured data.</p>
 <section id="syntax">
-<h4>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h4>
+<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">read_modeled_estimates</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sep</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">date_label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">site_label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">streamflow_label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">start_date</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">end_date</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span>
 </pre></div>
 </div>
@@ -455,15 +445,15 @@ The function returns a dataframe with the restructured data.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">df_gages</span></code> (pd.DataFrame): The resulting dataframe after reading and processing the modeled estimates.</p></li>
 </ul>
-</section>
-</section>
 <hr class="docutils" />
+</section>
+</section>
 <section id="match-gages">
-<h3><code class="docutils literal notranslate"><span class="pre">match_gages()</span></code><a class="headerlink" href="#match-gages" title="Permalink to this heading">#</a></h3>
+<h2><code class="docutils literal notranslate"><span class="pre">match_gages()</span></code><a class="headerlink" href="#match-gages" title="Permalink to this heading">#</a></h2>
 <p>This is a function for matching USGS gage sites to nodes in Pywr-DRB and handling cases where the gage is located downstream of a reservoir or other nodes. It takes as input a pandas dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code> containing the USGS gage data, a string <code class="docutils literal notranslate"><span class="pre">dataset_label</span></code> to label the output file, and a boolean <code class="docutils literal notranslate"><span class="pre">use_pub</span></code> that determines whether to use additional modeled gage data. The function returns a pandas dataframe whose columns are the names of Pywr-DRB nodes.</p>
 <p>The function first reads in additional modeled gage data if <code class="docutils literal notranslate"><span class="pre">use_pub</span></code> is True. Then, it defines a dictionary <code class="docutils literal notranslate"><span class="pre">site_matches_reservoir</span></code> that matches gages to reservoir catchments and a list of lists <code class="docutils literal notranslate"><span class="pre">site_matches_link</span></code> containing mainstem nodes, matching USGS gages, and upstream nodes to subtract.</p>
 <section id="id1">
-<h4>Syntax<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<h3>Syntax<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">match_gages</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">dataset_label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">use_pub</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
 </pre></div>
 </div>
@@ -477,7 +467,6 @@ The function returns a dataframe with the restructured data.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">inflow</span></code> (pandas.DataFrame): The dataframe containing modified streamflow records.</p></li>
 </ul>
-</section>
 </section>
 </section>
 </section>
@@ -543,15 +532,12 @@ The function returns a dataframe with the restructured data.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-modeled-estimates"><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-modeled-estimates"><code class="docutils literal notranslate"><span class="pre">read_modeled_estimates()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#match-gages"><code class="docutils literal notranslate"><span class="pre">match_gages()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#match-gages"><code class="docutils literal notranslate"><span class="pre">match_gages()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
 </ul>
 </li>
 </ul>

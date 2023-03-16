@@ -391,19 +391,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-starfit-params"><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-starfit-params"><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-major-node"><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-major-node"><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model"><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Syntax</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model"><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Syntax</a></li>
 </ul>
 </li>
 </ul>
@@ -420,32 +417,21 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="drb-make-model-py">
 <h1><code class="docutils literal notranslate"><span class="pre">drb_make_model.py</span></code><a class="headerlink" href="#drb-make-model-py" title="Permalink to this heading">#</a></h1>
 <p>This script as an executable used to generate the Pywr-DRB model.</p>
-<section id="functions">
-<h2>Functions:<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<p><strong>Functions:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code>
+This function creates and returns a dictionary of parameters required to simulate starfit reservoir.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code>
+This function adds nodes (reservoirs and river nodes) to the Pywr model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code>
+This function constructs the JSON file which defines the Pywr mdoel.</p></li>
 </ul>
-<blockquote>
-<div><p>This function creates and returns a dictionary of parameters required to simulate starfit reservoir.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code></p></li>
-</ul>
-<blockquote>
-<div><p>This function adds nodes (reservoirs and river nodes) to the Pywr model.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code></p></li>
-</ul>
-<blockquote>
-<div><p>This function constructs the JSON file which defines the Pywr mdoel.</p>
-</div></blockquote>
 <hr class="docutils" />
 <section id="create-starfit-params">
-<h3><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code><a class="headerlink" href="#create-starfit-params" title="Permalink to this heading">#</a></h3>
+<h2><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code><a class="headerlink" href="#create-starfit-params" title="Permalink to this heading">#</a></h2>
 <p>This function creates and returns a dictionary of parameters required to simulate starfit reservoir. It first initializes some constants associated with the STARFIT rule type. It then retrieves the required constant parameters for the given reservoir from a csv file and saves them to the dictionary. Finally, it aggregates some of the constant parameters using a specified function and saves the aggregated values to the dictionary.</p>
 <section id="syntax">
-<h4>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h4>
+<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">create_starfit_params</span><span class="p">(</span><span class="n">d</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">starfit_remove_Rmax</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">starfit_linear_below_NOR</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </pre></div>
 </div>
@@ -460,14 +446,14 @@ document.write(`
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">d</span></code> (dict): The dictionary containing the required parameters for simulating the starfit reservoir.</p></li>
 </ul>
-</section>
-</section>
 <hr class="docutils" />
+</section>
+</section>
 <section id="add-major-node">
-<h3><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code><a class="headerlink" href="#add-major-node" title="Permalink to this heading">#</a></h3>
+<h2><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code><a class="headerlink" href="#add-major-node" title="Permalink to this heading">#</a></h2>
 <p>Add a major node to the model. Major nodes types include reservoir &amp; river nodes. This function will add the major node and all standard minor nodes that belong to each major node ( i.e., catchment, withdrawal, consumption, outflow), along with their standard parameters and edges. All nodes, edges, and parameters are added to the model dict, which is then returned.</p>
 <section id="id1">
-<h4>Syntax<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<h3>Syntax<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">add_major_node</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">node_type</span><span class="p">,</span> <span class="n">inflow_type</span><span class="p">,</span> <span class="n">backup_inflow_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">outflow_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">downstream_node</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">initial_volume</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">initial_volume_perc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">variable_cost</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
 </pre></div>
 </div>
@@ -488,14 +474,14 @@ document.write(`
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> (dict): the updated model dict, with all nodes, edges, and parameters added.</p></li>
 </ul>
-</section>
-</section>
 <hr class="docutils" />
+</section>
+</section>
 <section id="drb-make-model">
-<h3><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code><a class="headerlink" href="#drb-make-model" title="Permalink to this heading">#</a></h3>
+<h2><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code><a class="headerlink" href="#drb-make-model" title="Permalink to this heading">#</a></h2>
 <p>This function creates a JSON file used by Pywr to define the DRB (Delaware River Basin) model, including all nodes, edges, and parameters.This function depends on <code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code> function.</p>
 <section id="id2">
-<h4>Syntax<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<h3>Syntax<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">drb_make_model</span><span class="p">(</span><span class="n">inflow_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">backup_inflow_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">start_date</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">end_date</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">use_hist_NycNjDeliveries</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </pre></div>
 </div>
@@ -511,7 +497,6 @@ document.write(`
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>. The JSON file representing the model is saved as <code class="docutils literal notranslate"><span class="pre">./model_data/drb_model_full.json</span></code></p></li>
 </ul>
-</section>
 </section>
 </section>
 </section>
@@ -577,19 +562,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-starfit-params"><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-starfit-params"><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-major-node"><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-major-node"><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model"><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Syntax</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model"><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Syntax</a></li>
 </ul>
 </li>
 </ul>
