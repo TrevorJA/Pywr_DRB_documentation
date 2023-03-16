@@ -4,7 +4,7 @@
 
 The model is run by calling the `drb_run_sim.py` file from the command line, with arguments for `inflow_type` and `backup_inflow_type`.
 
-The inflow type options are `obs_pub`, `nhmv10`, `nwmv21`, `nwmv21_withLakes`, and `WEAP_23Aug2022_gridmet`. For descriptions of these different inflow data, see the [Data Summary](../Supplemental/data_summary.md) page.
+The inflow type options are `obs_pub`, `nhmv10`, `nwmv21`, `nwmv21_withLakes`, and `WEAP_23Aug2022_gridmet`. For descriptions of these different inflow data, see the [Data Summary](../../Supplemental/data_summary.md) page.
 
 Example:
 
