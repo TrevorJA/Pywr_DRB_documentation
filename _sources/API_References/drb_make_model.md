@@ -1,10 +1,50 @@
 # `drb_make_model.py`
 
-## `add_major_node(model, name, node_type, inflow_type, backup_inflow_type=None, outflow_type=None, downstream_node=None, initial_volume=None, initial_volume_perc=None, variable_cost=None)`
+This script as an executable used to generate the Pywr-DRB model.
 
-Add a major node to the model. Major nodes types include reservoir & river. This function will add the major node and all standard minor nodes that belong to each major node ( i.e., catchment, withdrawal, consumption, outflow), along with their standard parameters and edges. All nodes, edges, and parameters are added to the model dict, which is then returned.
+## Functions:
+- `create_starfit_params()`
+> This function creates and returns a dictionary of parameters required to simulate starfit reservoir.
 
-Parameters:
+- `add_major_node()`
+> This function adds nodes (reservoirs and river nodes) to the Pywr model.
+
+- `drb_make_model()`
+> This function constructs the JSON file which defines the Pywr mdoel.
+
+
+***
+
+### `create_starfit_params()`
+This function creates and returns a dictionary of parameters required to simulate starfit reservoir. It first initializes some constants associated with the STARFIT rule type. It then retrieves the required constant parameters for the given reservoir from a csv file and saves them to the dictionary. Finally, it aggregates some of the constant parameters using a specified function and saves the aggregated values to the dictionary.
+
+#### Syntax
+```python
+create_starfit_params(d: dict, r: str, starfit_remove_Rmax=False, starfit_linear_below_NOR=False) -> None
+```
+
+**Parameters:**
+- d (dict): A dictionary which will store the parameters for the reservoir.
+- r (str): The name of the reservoir.
+- starfit_remove_Rmax (bool): Whether to remove the Rmax parameter from starfit.
+- starfit_linear_below_NOR (bool): Whether to model below the NOR with linear behavior.
+
+**Returns:**
+- `d` (dict): The dictionary containing the required parameters for simulating the starfit reservoir.
+
+
+***
+
+### `add_major_node()`
+
+Add a major node to the model. Major nodes types include reservoir & river nodes. This function will add the major node and all standard minor nodes that belong to each major node ( i.e., catchment, withdrawal, consumption, outflow), along with their standard parameters and edges. All nodes, edges, and parameters are added to the model dict, which is then returned.
+
+#### Syntax
+```python
+add_major_node(model, name, node_type, inflow_type, backup_inflow_type=None, outflow_type=None, downstream_node=None, initial_volume=None, initial_volume_perc=None, variable_cost=None) -> dict
+```
+
+**Parameters:**
 -   `model` (dict): the dict holding all model elements, which will be written to JSON file at completion.
 -   `name` (str): name of major node
 -   `node_type` (str): type of major node - either 'reservoir' or 'river'
@@ -16,34 +56,27 @@ Parameters:
 -   `initial_volume_perc` (float): (reservoirs only) fraction full for reservoir initially (note this is fraction, not percent, a confusing pywr convention)
 -   `variable_cost` (bool): (reservoirs only) If False, cost is fixed throughout simulation. If True, it varies according to state-dependent parameter.
 
-Returns:
+**Returns:**
 -   `model` (dict): the updated model dict, with all nodes, edges, and parameters added.
 
 
 ***
-## `drb_make_model(inflow_type, backup_inflow_type, start_date, end_date, use_hist_NycNjDeliveries=True)`
 
-This function creates the JSON file used by Pywr to define the model. This includes all nodes, edges, and parameters.
+### `drb_make_model()`
 
-Parameters
--   `inflow_type`: the type of inflow - i.e., 'nhmv10', etc
--   `backup_inflow_type`: backup inflow type - i.e., 'nhmv10', etc. Only active if `inflow_type` is a WEAP series. Backup is used to fill inflows for non-WEAP reservoirs.
--   `start_date`: start date of the simulation
--   `end_date`: end date of the simulation
--   `use_hist_NycNjDeliveries`: boolean indicating whether to use historical NYC/NJ deliveries data or not. Default is `True`.
+This function creates a JSON file used by Pywr to define the DRB (Delaware River Basin) model, including all nodes, edges, and parameters.This function depends on `add_major_node()` function.
 
-Returns
-- None
+#### Syntax
+```python
+drb_make_model(inflow_type: str, backup_inflow_type: str, start_date: str, end_date: str, use_hist_NycNjDeliveries: bool=True) -> None
+```
 
-***
-## `create_starfit_params()`
+**Parameters:**
+- `inflow_type` (str): The type of inflow to the reservoir.
+- `backup_inflow_type` (str): The type of backup inflow to the reservoir.
+- `start_date` (str): The start date of the simulation period.
+- `end_date` (str): The end date of the simulation period.
+- `use_hist_NycNjDeliveries` (bool): Whether to use historical New York City and New Jersey deliveries data. Default value is True.
 
-This function `create_starfit_params` takes two arguments `d` which is a dictionary of parameters and `r` which is a string representing the name of a reservoir. The function generates and stores relevant parameters associated with simulating the behavior of a reservoir using the STARFIT rule type in the input dictionary.
-
-The function first initializes two boolean variables `starfit_remove_Rmax` and `starfit_linear_below_NOR` to `True`. Then it proceeds to generate various constant parameters associated with the STARFIT rule type for the input reservoir. Each parameter has a unique key in the dictionary `d`.
-
-Next, the function generates a list of aggregated parameters. Each aggregated parameter is generated using a function (sum, max, product) applied to a list of constant or other aggregated parameters. These aggregated parameters also have unique keys in the dictionary `d`.
-
-The function conditionally generates two additional aggregated parameters based on the values of `starfit_linear_below_NOR` and `starfit_remove_Rmax`. If `starfit_linear_below_NOR` is `False`, an aggregated parameter called `belowNOR_final` is generated using the `Release_min_final` parameter. If `starfit_remove_Rmax` is `False`, an aggregated parameter called `neg_NORhi_final_unnorm` is generated using the `NORhi_final` parameter.
-
-The final dictionary of parameters `d` is returned.
+**Returns:**
+- `None`. The JSON file representing the model is saved as `./model_data/drb_model_full.json`
