@@ -2,15 +2,15 @@
 
 This script as an executable used to generate the Pywr-DRB model.
 
-## Functions:
+**Functions:**
 - `create_starfit_params()`
-> This function creates and returns a dictionary of parameters required to simulate starfit reservoir.
+This function creates and returns a dictionary of parameters required to simulate starfit reservoir.
 
 - `add_major_node()`
-> This function adds nodes (reservoirs and river nodes) to the Pywr model.
+This function adds nodes (reservoirs and river nodes) to the Pywr model.
 
 - `drb_make_model()`
-> This function constructs the JSON file which defines the Pywr mdoel.
+This function constructs the JSON file which defines the Pywr mdoel.
 
 
 ***
