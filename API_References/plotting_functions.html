@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>drb_make_model.py &#8212; Pywr-DRB Integrated Water Resource Management Model</title>
+    <title>Plotting Functions &#8212; Pywr-DRB Integrated Water Resource Management Model</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'API_References/drb_make_model';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'API_References/plotting_functions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="drb_run_sim.py" href="drb_run_sim.html" />
-    <link rel="prev" title="prep_input_data.py" href="prep_input_data.html" />
+    <link rel="next" title="Supplemental Material" href="../Supplemental/supplemental.html" />
+    <link rel="prev" title="custom_pywr.py" href="custom_pywr.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,12 +186,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="api_references.html">API References</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="prep_input_data.html">prep_input_data.py</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">drb_make_model.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drb_make_model.html">drb_make_model.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drb_run_sim.html">drb_run_sim.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drb_make_figs.html">drb_make_figs.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drb_run_all.html">drb_run_all.sh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom_pywr.html">custom_pywr.py</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plotting_functions.html">Plotting Functions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Plotting Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Supplemental/supplemental.html">Supplemental Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -271,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/ahamilton144/DRB_water_management/issues/new?title=Issue%20on%20page%20%2FAPI_References/drb_make_model.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ahamilton144/DRB_water_management/issues/new?title=Issue%20on%20page%20%2FAPI_References/plotting_functions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -301,7 +301,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/API_References/drb_make_model.md" target="_blank"
+      <li><a href="../_sources/API_References/plotting_functions.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -383,7 +383,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>drb_make_model.py</h1>
+    <h1>Plotting Functions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,16 +393,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-starfit-params"><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-3part-flows"><code class="docutils literal notranslate"><span class="pre">plot_3part_flows()</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-major-node"><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-weekly-flow-distributions"><code class="docutils literal notranslate"><span class="pre">plot_weekly_flow_distributions()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax:</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model"><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-radial-error-metrics"><code class="docutils literal notranslate"><span class="pre">plot_radial_error_metrics()</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-rrv-metrics"><code class="docutils literal notranslate"><span class="pre">plot_rrv_metrics()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-flow-contributions"><code class="docutils literal notranslate"><span class="pre">plot_flow_contributions()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Syntax</a></li>
 </ul>
 </li>
 </ul>
@@ -416,88 +424,130 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="drb-make-model-py">
-<h1><code class="docutils literal notranslate"><span class="pre">drb_make_model.py</span></code><a class="headerlink" href="#drb-make-model-py" title="Permalink to this heading">#</a></h1>
-<p>This script as an executable used to generate the Pywr-DRB model.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="plotting-functions">
+<h1>Plotting Functions<a class="headerlink" href="#plotting-functions" title="Permalink to this heading">#</a></h1>
+<p>These functions are all located in <a class="reference internal" href="drb_make_figs.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">drb_make_figs.py</span></code></span></a> and are used to produce the figures shown in <a class="reference internal" href="../Getting_Started/Interpret_Results/output_figures.html"><span class="doc std std-doc">Figures</span></a>. All figures (for different models and nodes) are produced and saved in <code class="docutils literal notranslate"><span class="pre">DRB_water_management/figs/</span></code> when <code class="docutils literal notranslate"><span class="pre">drb_make_figs.py</span></code> is executed.</p>
 <p><strong>Functions:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code>
-This function creates and returns a dictionary of parameters required to simulate starfit reservoir.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code>
-This function adds nodes (reservoirs and river nodes) to the Pywr model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code>
-This function constructs the JSON file which defines the Pywr mdoel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_3part_flows()</span></code>
+Produces a 3-panel plot containing flow timeseries, scatter plot, and flow duration plot for observed and modeled data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_weekly_flow_distributions()</span></code>
+Plots distributions of weekly flows, for observed and 1 or two modeled data at a specific node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_radial_error_metrics()</span></code>
+Generates radial plots across different metrics/reservoirs/models.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_rrv_metrics()</span></code>
+Generates a 3-panel plot containing histograms of reliability, resiliency, &amp; vulnerability (RRV) for different models &amp; nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_flow_contributions()</span></code>
+Generates a stacked area plot of streamflow timeseries at a given node and for a given model.</p></li>
 </ul>
 <hr class="docutils" />
-<section id="create-starfit-params">
-<h2><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code><a class="headerlink" href="#create-starfit-params" title="Permalink to this heading">#</a></h2>
-<p>This function creates and returns a dictionary of parameters required to simulate starfit reservoir. It first initializes some constants associated with the STARFIT rule type. It then retrieves the required constant parameters for the given reservoir from a csv file and saves them to the dictionary. Finally, it aggregates some of the constant parameters using a specified function and saves the aggregated values to the dictionary.</p>
+<section id="plot-3part-flows">
+<h2><code class="docutils literal notranslate"><span class="pre">plot_3part_flows()</span></code><a class="headerlink" href="#plot-3part-flows" title="Permalink to this heading">#</a></h2>
+<p>A plotting function to produce a 3-panel plot containing flow timeseries, scatter plot, and flow duration plot for observed and modeled data. Can plot observed plus 1 or 2 modeled series.</p>
 <section id="syntax">
 <h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">create_starfit_params</span><span class="p">(</span><span class="n">d</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">starfit_remove_Rmax</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">starfit_linear_below_NOR</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_3part_flows</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">models</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;0.5&#39;</span><span class="p">,</span> <span class="s1">&#39;#67a9cf&#39;</span><span class="p">,</span> <span class="s1">&#39;#ef8a62&#39;</span><span class="p">],</span> <span class="n">uselog</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </pre></div>
 </div>
 <p><strong>Parameters:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code> (dict): A dictionary which will store the parameters for the reservoir.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> (str): The name of the reservoir.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">starfit_remove_Rmax</span></code> (bool): Whether to remove the Rmax parameter from starfit.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">starfit_linear_below_NOR</span></code> (bool): Whether to model below the NOR with linear behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">results</span></code> (pd.DataFrame): The df containing results, generated by <code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code> or <code class="docutils literal notranslate"><span class="pre">get_base_results()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">models</span></code> (list): The list of strings of length 1 or 2 containing indicator names for the datasets/models of interest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code> (str): The name of the node of interest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">colors</span></code> (list): A list of colors.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uselog</span></code> (bool): Boolean to use log-transformation of flows. Default is False.</p></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code> (dict): The dictionary containing the required parameters for simulating the starfit reservoir.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: The figure is saved.</p></li>
 </ul>
 <hr class="docutils" />
 </section>
 </section>
-<section id="add-major-node">
-<h2><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code><a class="headerlink" href="#add-major-node" title="Permalink to this heading">#</a></h2>
-<p>Add a major node to the model. Major nodes types include reservoir &amp; river nodes. This function will add the major node and all standard minor nodes that belong to each major node ( i.e., catchment, withdrawal, consumption, outflow), along with their standard parameters and edges. All nodes, edges, and parameters are added to the model dict, which is then returned.</p>
+<section id="plot-weekly-flow-distributions">
+<h2><code class="docutils literal notranslate"><span class="pre">plot_weekly_flow_distributions()</span></code><a class="headerlink" href="#plot-weekly-flow-distributions" title="Permalink to this heading">#</a></h2>
+<p>Plots distributions of weekly flows, for observed and 1 or two modeled data at a specific node. Produces a 2-panel plot with normal and log-space flow distributions.</p>
 <section id="id1">
-<h3>Syntax<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">add_major_node</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">node_type</span><span class="p">,</span> <span class="n">inflow_type</span><span class="p">,</span> <span class="n">backup_inflow_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">outflow_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">downstream_node</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">initial_volume</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">initial_volume_perc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">variable_cost</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+<h3>Syntax:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_weekly_flow_distributions</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">models</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;0.5&#39;</span><span class="p">,</span> <span class="s1">&#39;#67a9cf&#39;</span><span class="p">,</span> <span class="s1">&#39;#ef8a62&#39;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </pre></div>
 </div>
 <p><strong>Parameters:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> (dict): the dict holding all model elements, which will be written to JSON file at completion.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (str): name of major node</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_type</span></code> (str): type of major node - either ‘reservoir’ or ‘river’</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">inflow_type</span></code> (str): ‘nhmv10’, etc</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backup_inflow_type</span></code> (str): ‘nhmv10’, etc. only active if inflow_type is a WEAP series - backup used to fill inflows for non-WEAP reservoirs.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outflow_type</span></code> (str): define what type of outflow node to use (if any) - either ‘starfit’ or ‘regulatory’</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">downstream_node</span></code> (str): name of node directly downstream, for writing edge network.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initial_volume</span></code> (float): (reservoirs only) starting volume of reservoir in MG. Must correspond to “initial_volume_perc” times total volume, as pywr doesnt calculate this automatically in time step 0.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initial_volume_perc</span></code> (float): (reservoirs only) fraction full for reservoir initially (note this is fraction, not percent, a confusing pywr convention)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">variable_cost</span></code> (bool): (reservoirs only) If False, cost is fixed throughout simulation. If True, it varies according to state-dependent parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">results</span></code> (pd.DataFrame): The df containing results, generated by <code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code> or <code class="docutils literal notranslate"><span class="pre">get_base_results()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">models</span></code> (list): The list of strings of length 1 or 2 containing indicator names for the datasets/models of interest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code> (str): The name of the node of interest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">colors</span></code> (list): A list of colors.</p></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> (dict): the updated model dict, with all nodes, edges, and parameters added.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: The figure is saved.</p></li>
 </ul>
 <hr class="docutils" />
 </section>
 </section>
-<section id="drb-make-model">
-<h2><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code><a class="headerlink" href="#drb-make-model" title="Permalink to this heading">#</a></h2>
-<p>This function creates a JSON file used by Pywr to define the DRB (Delaware River Basin) model, including all nodes, edges, and parameters.This function depends on <code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code> function.</p>
+<section id="plot-radial-error-metrics">
+<h2><code class="docutils literal notranslate"><span class="pre">plot_radial_error_metrics()</span></code><a class="headerlink" href="#plot-radial-error-metrics" title="Permalink to this heading">#</a></h2>
+<p>Generates radial plots across different metrics/reservoirs/models.</p>
 <section id="id2">
 <h3>Syntax<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">drb_make_model</span><span class="p">(</span><span class="n">inflow_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">backup_inflow_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">start_date</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">end_date</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">use_hist_NycNjDeliveries</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_radial_error_metrics</span><span class="p">(</span><span class="n">results_metrics</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">radial_models</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">useNonPep</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">useweap</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">usepywr</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">usemajorflows</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </pre></div>
 </div>
 <p><strong>Parameters:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">inflow_type</span></code> (str): The type of inflow to the reservoir.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backup_inflow_type</span></code> (str): The type of backup inflow to the reservoir.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start_date</span></code> (str): The start date of the simulation period.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">end_date</span></code> (str): The end date of the simulation period.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">use_hist_NycNjDeliveries</span></code> (bool): Whether to use historical New York City and New Jersey deliveries data. Default value is True.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">results_metrics</span></code> (pd.DataFrame): The df containing all error metrics, produced by <code class="docutils literal notranslate"><span class="pre">get_error_metrics()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">radial_models</span></code> (list): A list of strings containing model names.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> (list): A list of strings containing node names.</p></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>. The JSON file representing the model is saved as <code class="docutils literal notranslate"><span class="pre">./model_data/drb_model_full.json</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: The figure is saved.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="plot-rrv-metrics">
+<h2><code class="docutils literal notranslate"><span class="pre">plot_rrv_metrics()</span></code><a class="headerlink" href="#plot-rrv-metrics" title="Permalink to this heading">#</a></h2>
+<p>Generates a 3-panel plot containing histograms of reliability, resiliency, &amp; vulnerability (RRV) for different models &amp; nodes. RRV metrics are based on Hashimoto et al. (1982) and Montague and Trenton flow objectes.</p>
+<section id="id3">
+<h3>Syntax<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_rrv_metrics</span><span class="p">(</span><span class="n">rrv_metrics</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">rrv_models</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rrv_metrics</span></code> (pd.DataFrame): The df containing all RRV metrics, produced by <code class="docutils literal notranslate"><span class="pre">get_RRV_metrics()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rrv_models</span></code> (list): A list of strings containing model names.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> (list): A list of strings containing node names.</p></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: The figure is saved</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="plot-flow-contributions">
+<h2><code class="docutils literal notranslate"><span class="pre">plot_flow_contributions()</span></code><a class="headerlink" href="#plot-flow-contributions" title="Permalink to this heading">#</a></h2>
+<p>Generates a stacked area plot of streamflow timeseries at a given node and for a given model. The stacked area can either be absolute flow or percentage of total flow.</p>
+<section id="id4">
+<h3>Syntax<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_flow_contributions</span><span class="p">(</span><span class="n">res_releases</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">major_flows</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">separate_pub_contributions</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">percentage_flow</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">plot_target</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">res_releases</span></code> (pd.DataFrame): The df of simualted reservoir releases.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">major_flows</span></code> (pd.DataFrame): The df of simulated flows at major nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> (str): The name of the model of interest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code> (str): The name of the node of interest; must be available in <code class="docutils literal notranslate"><span class="pre">major_flows</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage_flow</span></code> (bool): Indicator if plot should be percentage of total flow (True) or absolute. Default is True.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_target</span></code> (bool): Indicator if the flow target should be included as a dashed line.</p></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: The figure is saved.</p></li>
 </ul>
 </section>
 </section>
@@ -532,20 +582,20 @@ This function constructs the JSON file which defines the Pywr mdoel.</p></li>
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="prep_input_data.html"
+       href="custom_pywr.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">prep_input_data.py</span></code></p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">custom_pywr.py</span></code></p>
       </div>
     </a>
     <a class="right-next"
-       href="drb_run_sim.html"
+       href="../Supplemental/supplemental.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">drb_run_sim.py</span></code></p>
+        <p class="prev-next-title">Supplemental Material</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -564,16 +614,24 @@ This function constructs the JSON file which defines the Pywr mdoel.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-starfit-params"><code class="docutils literal notranslate"><span class="pre">create_starfit_params()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-3part-flows"><code class="docutils literal notranslate"><span class="pre">plot_3part_flows()</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-major-node"><code class="docutils literal notranslate"><span class="pre">add_major_node()</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-weekly-flow-distributions"><code class="docutils literal notranslate"><span class="pre">plot_weekly_flow_distributions()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax:</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drb-make-model"><code class="docutils literal notranslate"><span class="pre">drb_make_model()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-radial-error-metrics"><code class="docutils literal notranslate"><span class="pre">plot_radial_error_metrics()</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-rrv-metrics"><code class="docutils literal notranslate"><span class="pre">plot_rrv_metrics()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-flow-contributions"><code class="docutils literal notranslate"><span class="pre">plot_flow_contributions()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Syntax</a></li>
 </ul>
 </li>
 </ul>

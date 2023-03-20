@@ -188,8 +188,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../API_References/prep_input_data.html">prep_input_data.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../API_References/drb_make_model.html">drb_make_model.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../API_References/drb_run_sim.html">drb_run_sim.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../API_References/drb_make_figs.html">drb_make_figs.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../API_References/drb_run_all.html">drb_run_all.sh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../API_References/custom_pywr.html">custom_pywr.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../API_References/plotting_functions.html">Plotting Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../Supplemental/supplemental.html">Supplemental Material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -396,7 +398,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="model-outputs">
 <h1>Model Outputs<a class="headerlink" href="#model-outputs" title="Permalink to this heading">#</a></h1>
 <p>Simulation results are stored in the <code class="docutils literal notranslate"><span class="pre">output_data/</span></code> folder, and are named <code class="docutils literal notranslate"><span class="pre">drb_output_&lt;inflow_type&gt;.hdf5</span></code> where <code class="docutils literal notranslate"><span class="pre">inflow_type</span></code> corresponds to one of the naming conventions listed in <a class="reference internal" href="../../Supplemental/data_summary.html"><span class="doc std std-doc">Data Summary</span></a>.</p>
-<p>Description of information stored within <code class="docutils literal notranslate"><span class="pre">drb_output.hdf5</span></code>.</p>
+<p>The function <a class="reference internal" href="../../API_References/drb_make_figs.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code></span></a> is used to transform the <code class="docutils literal notranslate"><span class="pre">hdf5</span></code> file into a <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> containing simulated results at different nodes.</p>
 </section>
 
     <script type="text/x-thebe-config">

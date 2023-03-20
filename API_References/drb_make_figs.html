@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Script_name.py &#8212; Pywr-DRB Integrated Water Resource Management Model</title>
+    <title>drb_make_figs.py &#8212; Pywr-DRB Integrated Water Resource Management Model</title>
   
   
   
@@ -61,9 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'API_References/api_reference_template';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'API_References/drb_make_figs';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="drb_run_all.sh" href="drb_run_all.html" />
+    <link rel="prev" title="drb_run_sim.py" href="drb_run_sim.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,7 +156,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Overview/overview.html">Pywr-DRB Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Overview/DRB/drb_overview.html">Delaware River Basin</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Overview/DRB/drb_history.html">History</a></li>
@@ -182,11 +184,11 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="api_references.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="api_references.html">API References</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="prep_input_data.html">prep_input_data.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drb_make_model.html">drb_make_model.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drb_run_sim.html">drb_run_sim.py</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drb_make_figs.html">drb_make_figs.py</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">drb_make_figs.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drb_run_all.html">drb_run_all.sh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom_pywr.html">custom_pywr.py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plotting_functions.html">Plotting Functions</a></li>
@@ -269,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/ahamilton144/DRB_water_management/issues/new?title=Issue%20on%20page%20%2FAPI_References/api_reference_template.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ahamilton144/DRB_water_management/issues/new?title=Issue%20on%20page%20%2FAPI_References/drb_make_figs.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +301,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/API_References/api_reference_template.md" target="_blank"
+      <li><a href="../_sources/API_References/drb_make_figs.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -381,7 +383,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Script_name.py</h1>
+    <h1>drb_make_figs.py</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -391,8 +393,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-name">`Function_Name()``</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-pywr-results">`get_pywr_results()``</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-base-results"><code class="docutils literal notranslate"><span class="pre">get_base_results()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-error-metrics"><code class="docutils literal notranslate"><span class="pre">get_error_metrics()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-rrv-metrics"><code class="docutils literal notranslate"><span class="pre">get_RRV_metrics()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Syntax</a></li>
 </ul>
 </li>
 </ul>
@@ -406,33 +420,113 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="script-name-py">
-<h1><code class="docutils literal notranslate"><span class="pre">Script_name.py</span></code><a class="headerlink" href="#script-name-py" title="Permalink to this heading">#</a></h1>
-<p>Brief script summary.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="drb-make-figs-py">
+<h1><code class="docutils literal notranslate"><span class="pre">drb_make_figs.py</span></code><a class="headerlink" href="#drb-make-figs-py" title="Permalink to this heading">#</a></h1>
+<p>This module retrieves the Pywr-DRB model output, and produces all of the <a class="reference internal" href="../Getting_Started/Interpret_Results/output_figures.html"><span class="doc std std-doc">Figures</span></a> for each simulation result.</p>
+<p>All figures (for different models and nodes) are produced and saved in <code class="docutils literal notranslate"><span class="pre">DRB_water_management/figs/</span></code> when <code class="docutils literal notranslate"><span class="pre">drb_make_figs.py</span></code> is executed.</p>
 <p><strong>Functions:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">f1()</span></code>
-Brief function summary.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">f2()</span></code>
-Brief function summary.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code>
+This function retrieves the <code class="docutils literal notranslate"><span class="pre">drb_output_&lt;inflow_type&gt;.hdf5</span></code> output file and returns a Pandas DataFrame of simulated timeseries values.</p></li>
+</ul>
+<p>-<code class="docutils literal notranslate"><span class="pre">get_base_results()</span></code>
+A function for retrieving &amp; organizing results from non-pywr results (NHM, NWM, WEAP).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_error_metrics()</span></code>
+Compiles error metrics across models and nodes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_RRV_metrics()</span></code>
+Get measures of reliability, resilience, and vulnerability from Hashimoto et al., 1982.</p></li>
+</ul>
+<p><em>The following plotting functions are included in <code class="docutils literal notranslate"><span class="pre">drb_make_figs.py</span></code>, but are documented in the <a class="reference internal" href="plotting_functions.html"><span class="doc std std-doc">Plotting Functions</span></a> reference:</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_3part_flows()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_weekly_flow_distributions()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_radial_error_metrics()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_rrv_metrics()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plot_flow_contributions()</span></code></p></li>
 </ul>
 <hr class="docutils" />
-<section id="function-name">
-<h2>`Function_Name()``<a class="headerlink" href="#function-name" title="Permalink to this heading">#</a></h2>
-<p>1-2 paragraph description of what the function does.</p>
+<section id="get-pywr-results">
+<h2>`get_pywr_results()``<a class="headerlink" href="#get-pywr-results" title="Permalink to this heading">#</a></h2>
+<p>This function retrieves the <code class="docutils literal notranslate"><span class="pre">drb_output_&lt;inflow_type&gt;.hdf5</span></code> output file and returns a Pandas DataFrame of simulated timeseries values. The resulting DataFrame contains columns with the different timeseries values (column names corresponding to nodes) and a datetime index.</p>
 <section id="syntax">
 <h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">function_name</span><span class="p">(</span><span class="n">param1</span><span class="p">:</span> <span class="n">data_type</span><span class="p">,</span> <span class="n">param2</span><span class="p">:</span> <span class="n">data_type</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">return_type</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">get_pywr_results</span><span class="p">(</span><span class="n">output_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">results_set</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span>
 </pre></div>
 </div>
 <p><strong>Parameters:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">param1</span></code> (data_type): Description of what param1 does. Default value if it exists.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">param2</span></code> (data_type): Description of what param2 does. Default value if it exists.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output_dir</span></code> (str): The relative path to the output data folder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> (str): The indicator name for the dataset of interest. See the <a class="reference internal" href="../Supplemental/data_summary.html"><span class="doc std std-doc">Data Summary</span></a> page for more info.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">results_set</span></code> (str): Specify which types of model nodes to retrieve from the output file. Options are ‘all’, ‘res_releases’, or ‘major_flow’. Default is ‘all’.</p></li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">return_type</span></code> (return_data_type): Description of what the function returns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">results</span></code> (pd.DataFrame): A DataFrame with the results of interest, index is datetime.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="get-base-results">
+<h2><code class="docutils literal notranslate"><span class="pre">get_base_results()</span></code><a class="headerlink" href="#get-base-results" title="Permalink to this heading">#</a></h2>
+<p>This is a function for retrieving &amp; organizing results from non-pywr results (NHM, NWM, WEAP). It retrieves <code class="docutils literal notranslate"><span class="pre">gage_flow_&lt;model&gt;.csv</span></code> from the input directory, and returns a DataFrame which matches the formatting of the data produced by <code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code>.</p>
+<section id="id1">
+<h3>Syntax<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">get_base_results</span><span class="p">(</span><span class="n">input_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">datetime_index</span><span class="p">:</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">results_set</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">input_dir</span></code> (str): The relative path to the input data directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> (str): The indicator name for the dataset of interest. See the <a class="reference internal" href="../Supplemental/data_summary.html"><span class="doc std std-doc">Data Summary</span></a> page for more info.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime_index</span></code> (datetime): A pd.datetime type index. Use the index from the results generated by <code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code> to align data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">results_set</span></code> (str): Specify which types of model nodes to retrieve from the output file. Options are ‘all’, ‘res_releases’, or ‘major_flow’.</p></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gage_flow</span></code> (DataFrame): A DataFrame containing a subset of the <code class="docutils literal notranslate"><span class="pre">gage_flow</span></code> data, index is datetime.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="get-error-metrics">
+<h2><code class="docutils literal notranslate"><span class="pre">get_error_metrics()</span></code><a class="headerlink" href="#get-error-metrics" title="Permalink to this heading">#</a></h2>
+<p>Compiles error metrics across models and nodes. Metrics include NSE, KGE and KGE components (relative bias, variance and correlation), log-transformations of all of these metrics, and the Kolmogorov-Smirnov Statistic.</p>
+<section id="id2">
+<h3>Syntax<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">get_error_metrics</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">models</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">results</span></code> (pd.DataFrame): The df containing results, generated by <code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code> or <code class="docutils literal notranslate"><span class="pre">get_base_results()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">models</span></code> (list): The list of string indicator names for the datasets/models of interest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> (list): The list of strings of the nodes of interest.</p></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">results_metrics</span></code> (pd.DataFrame): A DataFrame of DataFrames containing all metrics across all models and nodes.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+<section id="get-rrv-metrics">
+<h2><code class="docutils literal notranslate"><span class="pre">get_RRV_metrics()</span></code><a class="headerlink" href="#get-rrv-metrics" title="Permalink to this heading">#</a></h2>
+<p>Get measures of reliability, resilience, and vulnerability (Hashimoto et al., 1982) based on the Montague and Trenton flow targets.</p>
+<section id="id3">
+<h3>Syntax<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">get_RRV_metrics</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">models</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span>
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">results</span></code> (pd.DataFrame): The df containing results, generated by <code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code> or <code class="docutils literal notranslate"><span class="pre">get_base_results()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">models</span></code> (list): The list of string indicator names for the datasets/models of interest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> (list): The list of strings of the nodes of interest.</p></li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rrv_metrics</span></code> (pd.DataFrame): A DataFrame of DataFrames containing RRV metrics across all models and nodes.</p></li>
 </ul>
 </section>
 </section>
@@ -466,6 +560,24 @@ Brief function summary.</p></li>
                 <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="drb_run_sim.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">drb_run_sim.py</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="drb_run_all.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">drb_run_all.sh</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -481,8 +593,20 @@ Brief function summary.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-name">`Function_Name()``</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-pywr-results">`get_pywr_results()``</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-base-results"><code class="docutils literal notranslate"><span class="pre">get_base_results()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-error-metrics"><code class="docutils literal notranslate"><span class="pre">get_error_metrics()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Syntax</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-rrv-metrics"><code class="docutils literal notranslate"><span class="pre">get_RRV_metrics()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Syntax</a></li>
 </ul>
 </li>
 </ul>
