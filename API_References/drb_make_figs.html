@@ -179,7 +179,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Getting_Started/Interpret_Results/interpret_results.html">Interpret results</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Interpret_Results/model_outputs.html">Model Outputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Interpret_Results/output_figures.html">Visualize Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Interpret_Results/output_figures.html">Diagnostic Figures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Getting_Started/Interpret_Results/visualize_streamflows.html">Visualize Streamflows</a></li>
 </ul>
 </li>
 </ul>
@@ -393,7 +394,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-pywr-results">`get_pywr_results()``</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-pywr-results"><code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 </ul>
 </li>
@@ -428,10 +429,8 @@ document.write(`
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code>
 This function retrieves the <code class="docutils literal notranslate"><span class="pre">drb_output_&lt;inflow_type&gt;.hdf5</span></code> output file and returns a Pandas DataFrame of simulated timeseries values.</p></li>
-</ul>
-<p>-<code class="docutils literal notranslate"><span class="pre">get_base_results()</span></code>
-A function for retrieving &amp; organizing results from non-pywr results (NHM, NWM, WEAP).</p>
-<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_base_results()</span></code>
+A function for retrieving &amp; organizing results from non-pywr results (NHM, NWM, WEAP).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">get_error_metrics()</span></code>
 Compiles error metrics across models and nodes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">get_RRV_metrics()</span></code>
@@ -447,7 +446,7 @@ Get measures of reliability, resilience, and vulnerability from Hashimoto et al.
 </ul>
 <hr class="docutils" />
 <section id="get-pywr-results">
-<h2>`get_pywr_results()``<a class="headerlink" href="#get-pywr-results" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code><a class="headerlink" href="#get-pywr-results" title="Permalink to this heading">#</a></h2>
 <p>This function retrieves the <code class="docutils literal notranslate"><span class="pre">drb_output_&lt;inflow_type&gt;.hdf5</span></code> output file and returns a Pandas DataFrame of simulated timeseries values. The resulting DataFrame contains columns with the different timeseries values (column names corresponding to nodes) and a datetime index.</p>
 <section id="syntax">
 <h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h3>
@@ -593,7 +592,7 @@ Get measures of reliability, resilience, and vulnerability from Hashimoto et al.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-pywr-results">`get_pywr_results()``</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-pywr-results"><code class="docutils literal notranslate"><span class="pre">get_pywr_results()</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 </ul>
 </li>
