@@ -8,7 +8,7 @@ All figures (for different models and nodes) are produced and saved in `DRB_wate
 - `get_pywr_results()`
 This function retrieves the `drb_output_<inflow_type>.hdf5` output file and returns a Pandas DataFrame of simulated timeseries values.
 
--`get_base_results()`
+- `get_base_results()`
 A function for retrieving & organizing results from non-pywr results (NHM, NWM, WEAP).
 
 - `get_error_metrics()`
@@ -27,7 +27,7 @@ Get measures of reliability, resilience, and vulnerability from Hashimoto et al.
 
 
 ***
-### `get_pywr_results()``
+### `get_pywr_results()`
 This function retrieves the `drb_output_<inflow_type>.hdf5` output file and returns a Pandas DataFrame of simulated timeseries values. The resulting DataFrame contains columns with the different timeseries values (column names corresponding to nodes) and a datetime index.
 
 #### Syntax
