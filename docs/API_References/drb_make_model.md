@@ -24,10 +24,10 @@ create_starfit_params(d: dict, r: str, starfit_remove_Rmax=False, starfit_linear
 ```
 
 **Parameters:**
-- d (dict): A dictionary which will store the parameters for the reservoir.
-- r (str): The name of the reservoir.
-- starfit_remove_Rmax (bool): Whether to remove the Rmax parameter from starfit.
-- starfit_linear_below_NOR (bool): Whether to model below the NOR with linear behavior.
+- `d` (dict): A dictionary which will store the parameters for the reservoir.
+- `r` (str): The name of the reservoir.
+- `starfit_remove_Rmax` (bool): Whether to remove the Rmax parameter from starfit.
+- `starfit_linear_below_NOR` (bool): Whether to model below the NOR with linear behavior.
 
 **Returns:**
 - `d` (dict): The dictionary containing the required parameters for simulating the starfit reservoir.

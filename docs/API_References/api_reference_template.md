@@ -2,9 +2,12 @@
 
 Brief script summary.
 
-## Functions:
-- `f()`
-> Brief function summary.
+**Functions:**
+- `f1()`
+Brief function summary.
+
+- `f2()`
+Brief function summary.
 
 
 ***
