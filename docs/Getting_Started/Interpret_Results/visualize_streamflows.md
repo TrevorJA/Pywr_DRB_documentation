@@ -14,7 +14,7 @@ Click on one of the names in the **Source** legend to highlight the contribution
 
 Zoom in on the figure to look more closely at a specific time period.
 
-<div style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+<div style="padding-bottom:50%; position:relative; display:block; width: 100%">
   <iframe src="../../_images/obs_pub_streamflow_stack_absolute.html"
   height = "100%" width = "100%"
   title = "Absolute flow contributions at Trenton"
@@ -35,7 +35,13 @@ Click on one of the names in the **Source** legend to highlight the contribution
 
 Zoom in on the figure to look more closely at a specific time period.
 
-<iframe id="serviceFrameSend" src="../../_images/nhmv10_streamflow_stack_absolute.html" height = "300" width = "800" title = "Absolute flow contributions at Trenton"></iframe>
+<div style="padding-bottom:35%; position:relative; display:block; width: 100%">
+  <iframe src="../../_images/nhmv10_streamflow_stack_absolute.html"
+  height = "100%" width = "100%"
+  title = "Absolute flow contributions at Trenton"
+  frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0">
+  </iframe>
+</div>
 
 ```
 ````
@@ -50,9 +56,9 @@ Simulated streamflow at Trenton is decomposed into the streamflow from each of t
 
 Click on one of the names in the **Source** legend to highlight the contribution from that specific node and zoom in on the figure to look more closely at a specific time period.
 
-<div style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+<div style="padding-bottom:25%; position:relative; display:block; width: 100%">
   <iframe src="../../_images/obs_pub_streamflow_stack_percent.html"
-  height = "350" width = "800"
+  height = "100%" width = "100%"
   title = "Percentage flow contributions at Trenton"
   frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0">
   </iframe>
@@ -65,14 +71,13 @@ Click on one of the names in the **Source** legend to highlight the contribution
 
 Click on one of the names in the **Source** legend to highlight the contribution from that specific node and zoom in on the figure to look more closely at a specific time period.
 
-<iframe id="serviceFrameSend" src="../../_images/nhmv10_streamflow_stack_absolute.html" height = "350" width = "800" title = "Absolute flow contributions at Trenton"></iframe>
+<div style="padding-bottom:15%; position:relative; display:block; width: 100%">
+  <iframe src="../../_images/nhmv10_streamflow_stack_percent.html"
+  height = "100%" width = "100%"
+  title = "Percentage flow contributions at Trenton"
+  frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0">
+  </iframe>
+</div>
 
 ```
 ````
-
-
-
-
-
-#### Percentage flow contributions at Trenton
-<iframe id="serviceFrameSend" src="../../_images/nhmv10_streamflow_stack_percent.html" height = "500" width = "800" title = "Percentage flow contributions at Trenton"></iframe>
