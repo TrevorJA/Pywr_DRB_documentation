@@ -17,7 +17,7 @@ Reservoir nodes are defined as `"storage"` node classes in `pywr` and contain in
 :name: reservoir-node-table
 
 * - Representation
-  - Node Name <br>(`{name}` is the major node name)
+  - Node Name<br>(`{name}` is the node name)
   - Description
 * - Major Node
   - `reservoir_{name}` or `link_{name}`
