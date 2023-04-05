@@ -47,7 +47,7 @@ The figure below shows the relationship between a reservoir node and its corresp
 
 ```{figure} ../../images/reservoir_node_schematic.png
 :name: reservoir-node-schematic
-:height: 500
+:scale: 120%
 
 Graphical representation of reservoir nodes and corresponding minor nodes used in the Pywr-DRB model.
 ```
