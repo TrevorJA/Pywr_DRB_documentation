@@ -23,7 +23,7 @@ Notice how the relative streamflow contributions from the NYC reservoirs is grea
 ```{tab-item} Historic Reconstruction
 :sync: key_obs_pub
 
-<div style="padding-bottom:50%; position:relative; display:block; width: 100%">
+<div style="padding-bottom:75%; position:relative; display:block; width: 100%">
   <iframe src="../../_images/obs_pub_interactive_streamflow_stack.html"
   height = "100%" width = "100%"
   title = "Percentage flow contributions at Trenton"
@@ -35,7 +35,7 @@ Notice how the relative streamflow contributions from the NYC reservoirs is grea
 ```{tab-item} NHMv10
 :sync: key_nhm
 
-<div style="padding-bottom:50%; position:relative; display:block; width: 100%">
+<div style="padding-bottom:80%; position:relative; display:block; width: 100%">
   <iframe src="../../_images/nhmv10_interactive_streamflow_stack.html"
   height = "100%" width = "100%"
   title = "Percentage flow contributions at Trenton"
@@ -47,7 +47,7 @@ Notice how the relative streamflow contributions from the NYC reservoirs is grea
 ```{tab-item} NWMv2.1
 :sync: key_nwm
 
-<div style="padding-bottom:50%; position:relative; display:block; width: 100%">
+<div style="padding-bottom:85%; position:relative; display:block; width: 100%">
   <iframe src="../../_images/nwmv21_interactive_streamflow_stack.html"
   height = "100%" width = "100%"
   title = "Percentage flow contributions at Trenton"
@@ -59,7 +59,7 @@ Notice how the relative streamflow contributions from the NYC reservoirs is grea
 ```{tab-item} WEAP
 :sync: key_weap
 
-<div style="padding-bottom:50%; position:relative; display:block; width: 100%">
+<div style="padding-bottom:60%; position:relative; display:block; width: 100%">
   <iframe src="../../_images/WEAP_23Aug2022_gridmet_nhmv10_interactive_streamflow_stack.html"
   height = "100%" width = "100%"
   title = "Percentage flow contributions at Trenton"

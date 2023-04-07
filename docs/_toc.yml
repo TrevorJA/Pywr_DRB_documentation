@@ -10,14 +10,12 @@ parts:
     - file: Overview/overview.md
       sections:
         - title: Delaware River Basin
-          file: Overview/DRB/drb_overview.md
           sections:
             - title: Hydrology
               file: Overview/DRB/drb_hydrology.md
             - title: Planning & Management
               file: Overview/DRB/drb_planning_management.md
         - title: Pywr-DRB Model
-          file: Overview/Model/pywr_drb_model.md
           sections:
             - title: Model Overview
               file: Overview/Model/pywr_drb_overview.md
@@ -31,7 +29,6 @@ parts:
         - title: Running Simulations
           file: Getting_Started/Running_Simulations/run_all_simulations.md
         - title: Interpret results
-          file: Getting_Started/Interpret_Results/interpret_results.md
           sections:
             - title: Model Outputs
               file: Getting_Started/Interpret_Results/explore_model_outputs.ipynb
