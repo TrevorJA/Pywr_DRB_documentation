@@ -37,7 +37,7 @@ Water from these reservoirs is conveyed to New York City through the Delaware Aq
 
 ```{figure} ../../images/nyc_reservoirs.png
 :name: nyc-reservoirs
-:scale: 125%
+:scale: 60%
 
 Graphical depiction of NYC water supplies, showing contribution from upper DRB reservoirs. **Figure source:** [New York City Environmental Protection](https://www.nyc.gov/site/dep/water/reservoir-levels.page)
 
