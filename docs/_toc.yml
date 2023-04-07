@@ -26,8 +26,8 @@ parts:
     # =============== Getting Started =================
     - file: Getting_Started/getting_started.md
       sections:
-        - title: Setup Model
-          file: Getting_Started/setup_model.md
+        - title: Quick-Start
+          file: Getting_Started/quick_start.md
         - title: Running Simulations
           file: Getting_Started/Running_Simulations/run_all_simulations.md
         - title: Interpret results
