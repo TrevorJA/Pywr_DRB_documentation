@@ -18,14 +18,13 @@ Population served by DRB water based on population estimates for 2016. **Figure 
 
 In the early 1960s, the Delaware River Basin experienced a severe drought that highlighted the need for coordinated management of water resources across state lines. The drought led to significant decreases in water levels in the basin’s reservoirs, threatening water supplies for millions of people in the region.
 
-The drought served as a catalyst for the establishment of the Delaware River Basin Commission (DRBC),consisting of New York State, New Jersey, Pennsylvania, Delaware, and New York City. The DRBC serves as an interstate-federal regulatory agency responsible for the development of coordinated, basin-wide water resource planning and management strategies.
+The drought served as a catalyst for the establishment of the Delaware River Basin Commission (DRBC) which consists of New York State, New Jersey, Pennsylvania, Delaware, and New York City. The DRBC serves as an interstate-federal regulatory agency responsible for the development of coordinated, basin-wide water resource planning and management strategies.
 
 The DRBC's mission as outlined in the Delaware River Basin Compact is:
 > "the conservation, utilization, development, management and control of water and related resources of the Delaware River Basin under a comprehensive multipurpose plan to bring the greatest benefits and produce the most efficient service in the public welfare." ([Delaware River Basin Compact](https://www.nj.gov/drbc/library/documents/compact.pdf), 1961)
 
-The DRBCs mission is to ensure the sustainable use, protection, and conservation of the basin's water resources for present and future generations. The DRBC's work encompasses a broad range of activities, including water quality management, water supply allocation, flood mitigation, and ecosystem restoration.
+In alignment with this mission, the DRBC's work encompasses a broad range of activities, including water quality management, water supply allocation, flood and drought mitigation, and ecosystem preservation.
 
-The formation of the DRBC and the Delaware River Basin Compact marked a significant shift in water management in the region. Rather than managing water resources on a state-by-state basis, the DRBC established a framework for coordinated management and decision-making across state lines. This has led to a more integrated approach to water management in the basin, with stakeholders working together to address issues such as water quality, water quantity, and ecosystem health.
 
 #### The Flexible Flow Management Program
 
@@ -35,7 +34,7 @@ The Flexible Flow Management Program (FFMP) is a significant initative by the DR
 To achieve their multiple water resource management objectives, the DRBC and its partners have undertaken (and continue to pursue) a wide range of initiatives, including:
 
 1. Developing and implementing comprehensive water resource plans, policies, and regulations to guide the sustainable use and protection of the basin's water resources.
-2. Investing in infrastructure improvements to enhance the basin's water storage capacity, flood mitigation capabilities, and ecosystem health.
+2. Investing in infrastructure improvements to help protect against floods and droughts.
 3. Conducting research and monitoring to improve understanding of the basin and to inform decision-making and adaptive management strategies.
 4. Engage with diverse stakeholders, including water users, government agencies, non-governmental organizations, and the public, to build consensus on water management priorities.
 
